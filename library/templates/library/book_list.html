@@ -1,12 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Available Books</h1>
-<ul>
-    {% for book in books %}
-        <li>
-            <a href="{% url 'book_detail' book.id %}">{{ book.title }}</a>
-        </li>
-    {% endfor %}
-</ul>
+<Div class="container">
+    <h1>Available Books</h1>
+    <ul>
+        {% for book in books %}
+            <li>
+                <a href="{% url 'book_detail' book.id %}">{{ book.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</Div>
+
 {% endblock %}

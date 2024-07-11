@@ -1,74 +1,257 @@
-/* Reset some basic elements for better consistency across browsers */
-body, h2, form, input, button {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+body {
+    background-color: #F9FAFC;
 }
 
-/* Apply a background color and center the content */
-body {
-    background-color: #f7f7f7;
+.brand {
+    font-family: Lato, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #4A4A4F;
+}
+
+.red-o {
+    color: #E84610;
+}
+
+.thin {
+    font-weight: 300;
+}
+
+.light-bg {
+    background-color: #fff;
+}
+
+.dark-bg {
+    background-color: #445261;
+}
+
+.main-bg {
+    background-color: #F9FAFC;
+}
+
+.card {
+    border: none;
+    background-color: transparent;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-flash {
+    position: absolute;
+    bottom: 5%;
+    min-width: 30%;
+    left: -2px;
+    background-color: #188181;
+}
+
+.scale {
+    width: 100%;
+    height: auto;
+}
+
+.author {
+    color: white;
+    margin: 4px;
+    text-transform: uppercase;
+}
+
+.masthead {
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    height: 33vh;
+    width: 100%;
+}
+
+.masthead-text {
+    background-color: #445261;
+    color: white;
+    position: relative;
+}
+
+.masthead-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.masthead-image:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 90%;
+    height: 100%;
+    width: 150%;
+    background: #445261;
+    -webkit-transform: skew(15deg);
+    -moz-transform: skew(15deg);
+    transform: skew(15deg);
+    z-index: 100;
+}
+
+.post-link {
+    text-decoration: none;
+    color: #445261;
+}
+
+.post-link:hover,
+.page-link {
+    color: #E84610;
+}
+
+.post-title {
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+.post-subtitle {
+    margin-left: 5%;
+    color: lightgray;
+}
+
+.btn-signup,
+.btn-edit {
+    background-color: #188181;
+    color: #fff;
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+    background-color: #fff;
+    color: #23BBBB;
+}
+
+.link {
+    color: #23BBBB;
+    text-decoration: none;
+}
+
+.link:hover,
+.link:active {
+    color: #445261;
+    text-decoration: underline;
+}
+
+.btn-like {
+    color: #E84610;
+    border: none;
+    background: transparent;
+}
+
+.btn-delete {
+    color: #fff;
+    background: #E84610;
+}
+
+.btn-like:hover,
+.btn-like:active {
+    color: #E84610;
+    background: transparent;
+    border: none;
+}
+
+.faded {
+    color: rgb(172, 175, 175);
+}
+
+.approval {
+    color: rgb(222, 146, 168);
+}
+
+/* Home page title */
+
+/* Centering the main container */
+.container {
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+/* Style the book list container */
+.book-list-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
-/* Style the container for the login form */
-.container {
+/* Style each book item */
+.book-item {
+    display: block;
+    padding: 1rem;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    flex: 1;
+    max-width: 200px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Sign up container */
+
+
+/* Centering and styling the signup container */
+.signup-container {
     background: #ffffff;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 400px;
-}
-
-/* Style the headings */
-h2 {
-    margin-bottom: 1.5rem;
-    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
-/* Style the form elements */
-form {
-    display: flex;
-    flex-direction: column;
+.signup-container h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
 }
 
-form input[type="text"],
-form input[type="password"] {
+.signup-container form {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup-container form input[type="text"],
+.signup-container form input[type="password"],
+.signup-container form input[type="email"] {
+    width: 100%;
     padding: 0.75rem;
     margin-bottom: 1rem;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-form button {
+.signup-container form button {
+    width: 100%;
     padding: 0.75rem;
     background-color: #007bff;
     color: #ffffff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-form button:hover {
+.signup-container form button:hover {
     background-color: #0056b3;
 }
 
-/* Add some spacing between form and footer links */
-form + div {
-    margin-top: 1.5rem;
-    text-align: center;
-}
-
-form + div a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-form + div a:hover {
-    text-decoration: underline;
+/* Ensure container elements look good even on smaller screens */
+@media (max-width: 600px) {
+    .signup-container {
+        width: 90%;
+    }
 }

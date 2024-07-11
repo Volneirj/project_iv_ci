@@ -1,7 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Welcome to the Library Management System</h1>
-<p>Manage books and track your issued books.</p>
-<a href="{% url 'book_list' %}">View Books</a>
+<div class="container">
+    <h1 class="main-title">Welcome to the VILMASYS</h1>
+    <p>Your Virtual library management system</p>
+    <div class="book-list-container">
+        <a class="book-item" href="{% url 'book_list' %}">View Books</a>
+        <a class="book-item" href="#">Return</a>
+        <!-- Add more items as needed -->
+    </div>
+</div>
 {% endblock %}
