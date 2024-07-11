@@ -2,6 +2,7 @@
 {% url 'home' as home_url %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Library Management System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -21,19 +22,65 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
+
 <body>
     <nav>
         <a href="{% url 'home' %}">Home</a>
         {% if user.is_authenticated %}
-            <a href="{% url 'logout' %}?next={{ request.path }}">Logout</a>
+        <a href="{% url 'book_list' %}">View Books</a>
+        <a href="{% url 'logout' %}?next={{ request.path }}">Logout</a>
         {% else %}
-            <a href="{% url 'login' %}">Login</a>
-            <a href="{% url 'signup' %}">Signup</a>
+        <a href="{% url 'login' %}">Login</a>
+        <a href="{% url 'signup' %}">Signup</a>
         {% endif %}
     </nav>
     <div>
         {% block content %}
         {% endblock %}
     </div>
+
+    <!-- displaying Django messages -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                {% for message in messages %}
+                <div class="alert {{ message.tags }} alert-dismissible
+              fade show" id="msg" role="alert">
+                    {{ message | safe }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <main class="flex-shrink-0 main-bg">
+        {% if user.is_authenticated %}
+        <p class="text-end m-3">You are logged in as {{ user }}</p>
+        {% else %}
+        <p class="text-end m-3">You are not logged in</p>
+        {% endif %}
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 dark-bg">
+        <p class="m-0 text-center text-white">
+            {% block copyright %}
+            Copyright 2024 Volnei Resena Jr
+            {% endblock copyright %}
+        </p>
+        <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
+            <i class="fab fa-twitter-square ms-3"></i>
+            <i class="fab fa-instagram-square ms-3"></i>
+            <i class="fab fa-youtube-square ms-3"></i>
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+        </script>
+
 </body>
+
 </html>
