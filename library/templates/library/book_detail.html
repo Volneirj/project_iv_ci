@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Available Books</h1>
+<div class="masthead">
+    <div class="container">
+        <div class="row g-0">
+            <div class="col-md-6 masthead-text">
+                <!-- Book title goes in these h1 tags -->
+                <h1 class="book-title">{{ book.title }}</h1>
+                <!-- Book info author, isbn etc... -->
+                <p class="book-subtitle">{{ book.author }} | {{ book.isbn }}</p>
+                <p class="book-subtitle">{{ book.available }}</p>
+            </div>
+            <div class="d-none d-md-block col-md-6 masthead-image">
+                {% if "placeholder" in post.featured_image.url %}
+                <img src="#" class="scale"
+                  alt="placeholder image">
+                {% else %}
+                <img src="{{ post.featured_image.url }}" class="scale"
+                  alt="{{ post.title }}">
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

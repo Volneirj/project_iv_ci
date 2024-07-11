@@ -21,6 +21,7 @@ Django==4.2.13
 django-allauth==0.57.2
 django-crispy-forms==2.2
 django-summernote==0.8.20.0
+djangorestframework==3.15.2
 et-xmlfile==1.1.0
 Flask==2.2.0
 Flask-SQLAlchemy==2.5.1
