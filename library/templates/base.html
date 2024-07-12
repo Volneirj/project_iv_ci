@@ -51,6 +51,10 @@
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
+                        <a class="nav-link {% if request.path == issued_books_list %}active{% endif %}" aria-current="page"
+                        href="{% url 'issued_books_list' %}">My Issued Books</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
                             href="{% url 'logout' %}">Logout</a>
                     </li>
@@ -118,7 +122,7 @@
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
         </script>
 
-{% block extras %}
+    {% block extras %}
     {% endblock %}
 </body>
 

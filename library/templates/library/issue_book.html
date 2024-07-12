@@ -3,12 +3,15 @@
 {% block content %}
 <div class="signup-container">
   <h2>Issue a Book</h2>
-  
+
   <!-- Issue Book Form -->
   <form method="post">
     {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Issue Book</button>
+    <input type="hidden" name="book_id" value="{{ book.id }}">
+    <p class="book-subtitle">{{ book.title }} | {{ book.author }}</p>
+    <p>Limit Return Date: {{ due_date }}</p>
+    {{ form.due_date.as_hidden }}
+    <button type="submit">Issue This Book</button>
   </form>
 </div>
 {% endblock %}

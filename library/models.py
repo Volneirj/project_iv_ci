@@ -7,6 +7,7 @@ class Book(models.Model):
     title = models.CharField(max_length=255)
     author = models.CharField(max_length=255)
     isbn = models.CharField(max_length=13, unique=True)
+    description = models.TextField(default='')
     featured_image = CloudinaryField('image', default='placeholder')
     available_copies = models.PositiveIntegerField(default=1)
 

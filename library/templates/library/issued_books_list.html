@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <h2>My Issued Books</h2>
+  <ul>
+    {% for issued_book in issued_books %}
+      <li>
+        <strong>{{ issued_book.book.title }}</strong> by {{ issued_book.book.author }}<br>
+        Issued on: {{ issued_book.issue_date|date:"Y-m-d" }}<br>
+        Due on: {{ issued_book.due_date|date:"Y-m-d" }}<br>
+        {% if issued_book.returned %}
+          Returned on: {{ issued_book.return_date|date:"Y-m-d" }}<br>
+        {% else %}
+          Status: Not returned<br>
+        {% endif %}
+        Late fee: ${{ issued_book.late_fee }}<br>
+      </li>
+    {% empty %}
+      <li>No books issued.</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}
