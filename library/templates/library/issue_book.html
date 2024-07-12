@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="signup-container">
+  <h2>Issue a Book</h2>
+  
+  <!-- Issue Book Form -->
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Issue Book</button>
+  </form>
+</div>
+{% endblock %}

@@ -1,15 +1,23 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<Div class="container">
-    <h1>Available Books</h1>
-    <ul>
-        {% for book in books %}
-            <li>
-                <a href="{% url 'book_detail' book.id %}">{{ book.title }}</a>
-            </li>
-        {% endfor %}
-    </ul>
-</Div>
-
+<div class="signup-container">
+  <h2>Book List</h2>
+  
+  <form method="get" action=".">
+    {{ form.as_p }}
+    <button type="submit">Search</button>
+  </form>
+  
+  <ul>
+    {% for book in books %}
+      <li>{{ book.title }} by {{ book.author }} - Available Copies: {{ book.available_copies }}</li>
+      
+    {% empty %}
+      <li>No books found.</li>
+    {% endfor %}
+  </ul>
+  
+  <a href="{% url 'issue_book' %}">Issue a Book</a>
+</div>
 {% endblock %}

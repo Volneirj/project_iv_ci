@@ -255,3 +255,25 @@ body {
         width: 90%;
     }
 }
+
+/* Centering the search form and styling */
+.signup-container {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.signup-container form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.signup-container form input {
+    flex: 1;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.signup-container form button {
+    padding: 5px 10px;
+}

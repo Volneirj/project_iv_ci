@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-<h1>Available Books</h1>
+<h1>Available Information</h1>
 <div class="masthead">
     <div class="container">
         <div class="row g-0">
@@ -10,15 +11,16 @@
                 <h1 class="book-title">{{ book.title }}</h1>
                 <!-- Book info author, isbn etc... -->
                 <p class="book-subtitle">{{ book.author }} | {{ book.isbn }}</p>
-                <p class="book-subtitle">{{ book.available }}</p>
+                <p class="book-subtitle">{{ book.available_copies }}</p>
+                <p class="book-subtitle">{{ book.description }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
-                {% if "placeholder" in post.featured_image.url %}
+                {% if "placeholder" in book.featured_image.url %}
                 <img src="#" class="scale"
                   alt="placeholder image">
                 {% else %}
-                <img src="{{ post.featured_image.url }}" class="scale"
-                  alt="{{ post.title }}">
+                <img src="{{ book.featured_image.url }}" class="scale"
+                  alt="{{ book.title }}">
                 {% endif %}
             </div>
         </div>

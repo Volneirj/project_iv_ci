@@ -5,9 +5,9 @@ from .models import Book, IssuedBook
 @admin.register(Book)
 class BookAdmin(SummernoteModelAdmin):
 
-    list_display = ('title', 'author', 'isbn', 'available')
+    list_display = ('title', 'author', 'isbn', 'available_copies')
     search_fields = ['title']
-    list_filter = ('available',)
+    list_filter = ('available_copies',)
     summernote_fields = ('content',)
 
 # Register your models here.
