@@ -30,6 +30,7 @@
             </div>
             {% if user.is_superuser %}
             <a href="{% url 'book_update' book_id=book.id %}" class="btn btn-warning">Edit Book</a>
+            <a href="{% url 'book_delete' book_id=book.id %}" class="btn btn-danger">Delete Book</a>
             {% endif %}
         </div>
     </div>
