@@ -23,7 +23,7 @@
             </div>
             <div class="d-none d-md-block col-md-6">
                 {% if "placeholder" in book.featured_image.url %}
-                <img src="#" class="scale" alt="placeholder image">
+                <img src="{% static 'media/book_images/placeholder.jpg' %}" class="scale" alt="placeholder image">
                 {% else %}
                 <img src="{{ book.featured_image.url }}" class="scale" alt="{{ book.title }}">
                 {% endif %}
