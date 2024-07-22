@@ -37,10 +37,8 @@ def issue_book(request, book_id):
 
 @login_required
 def issued_books_list(request):
-    # Get all issued books for the logged-in user
-    issued_books = IssuedBook.objects.filter(user=request.user)
+    issued_books = IssuedBook.objects.filter(user=request.user).order_by('-issue_date')
 
-    # Paginate the issued books
     paginator = Paginator(issued_books, 6)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
