@@ -1,23 +1,21 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="signup-container">
+<div class="container">
   <h2>Book List</h2>
-  
-  <form method="get" action=".">
-    {{ form.as_p }}
-    <button type="submit">Search</button>
-  </form>
-  
+
+  {% if user.is_authenticated and user.is_superuser %}
+  <a href="{% url 'book_create' %}" class="btn btn-primary">Add Book</a>
+  {% endif %}
+
   <ul>
     {% for book in books %}
-      <li><a href="{% url 'book_detail' book.id %}">{{ book.title }} by {{ book.author }} - Available Copies: {{ book.available_copies }}</a></li>
-      
+    <li>
+    <a href="{% url 'book_detail' book.id %}">{{ book.title }} by {{ book.author }} - Available Copies: {{ book.available_copies }}</a>
+    </li>
     {% empty %}
-      <li>No books found.</li>
+    <li>No books found.</li>
     {% endfor %}
   </ul>
-  
-  
 </div>
 {% endblock %}

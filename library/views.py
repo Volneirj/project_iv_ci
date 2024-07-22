@@ -1,11 +1,11 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib.auth import login, authenticate
 from django.utils import timezone
 from datetime import datetime, timedelta
 from .models import Book, IssuedBook
-from .forms import BookSearchForm, IssueBookForm
+from .forms import BookSearchForm, IssueBookForm, BookForm
 
 
 def signup(request):
@@ -33,14 +33,14 @@ def book_detail(request, book_id):
     book = get_object_or_404(Book, id=book_id)
     return render(request, 'library/book_detail.html', {'book': book})
 
-def book_list(request):
-    form = BookSearchForm()
-    query = request.GET.get('query')
-    if query:
-        books = Book.objects.filter(title__icontains=query)
-    else:
-        books = Book.objects.all()
-    return render(request, 'library/book_list.html', {'books': books, 'form': form})
+# def book_list(request):
+#     form = BookSearchForm()
+#     query = request.GET.get('query')
+#     if query:
+#         books = Book.objects.filter(title__icontains=query)
+#     else:
+#         books = Book.objects.all()
+#     return render(request, 'library/book_list.html', {'books': books, 'form': form})
 
 @login_required
 def issue_book(request, book_id):
@@ -77,3 +77,20 @@ def issue_book(request, book_id):
 def issued_books_list(request):
     issued_books = IssuedBook.objects.filter(user=request.user)
     return render(request, 'library/issued_books_list.html', {'issued_books': issued_books})
+
+def is_admin(user):
+    return user.is_superuser
+
+@login_required
+@user_passes_test(is_admin)
+def book_create(request):
+    if request.method == 'POST':
+        form = BookForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('book_list')
+    else:
+        form = BookForm()
+    return render(request, 'library/book_form.html', {'form': form, 'title': 'Add Book'})
+
+

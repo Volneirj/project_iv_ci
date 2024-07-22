@@ -1,5 +1,6 @@
 from django import forms
 from datetime import datetime, timedelta
+from .models import Book
 
 
 class BookSearchForm(forms.Form):
@@ -14,3 +15,8 @@ class IssueBookForm(forms.Form):
         super().__init__(*args, **kwargs)
 
         self.initial['due_date'] = datetime.now() + timedelta(days=14)
+
+class BookForm(forms.ModelForm):
+    class Meta:
+        model = Book
+        fields = ['title', 'author', 'isbn', 'description', 'featured_image', 'available_copies']
