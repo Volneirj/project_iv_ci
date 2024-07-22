@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 <div class="container">
@@ -8,14 +9,27 @@
   <a href="{% url 'book_create' %}" class="btn btn-primary">Add Book</a>
   {% endif %}
 
-  <ul>
+  <div class="row">
     {% for book in books %}
-    <li>
-    <a href="{% url 'book_detail' book.id %}">{{ book.title }} by {{ book.author }} - Available Copies: {{ book.available_copies }}</a>
-    </li>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <a href="{% url 'book_detail' book.id %}">
+          <div class="image-container">
+            {% if book.featured_image %}
+            <img src="{{ book.featured_image.url }}" class="card-img" alt="{{ book.title }}">
+            {% else %}
+            <img src="{% static 'book_images/placeholder.jpg' %}" class="card-img" alt="placeholder image">
+            {% endif %}
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{ book.title }}</h5>
+          </div>
+        </a>
+      </div>
+    </div>
     {% empty %}
-    <li>No books found.</li>
+    <p>No books found.</p>
     {% endfor %}
-  </ul>
+  </div>
 </div>
 {% endblock %}

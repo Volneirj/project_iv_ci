@@ -277,3 +277,25 @@ body {
 .signup-container form button {
     padding: 5px 10px;
 }
+
+/* Book list */
+.card a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .card-img-top {
+    cursor: pointer;
+  }
+
+  .image-container {
+    width: 100%; 
+    height: 600px;
+    overflow: hidden;
+  }
+  
+  .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+  }
