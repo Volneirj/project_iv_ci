@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+  <h2>Return Book</h2>
+
+  <div class="card">
+    <img src="{% if issued_book.book.featured_image %}{{ issued_book.book.featured_image.url }}{% else %}{% static 'book_images/placeholder.jpg' %}{% endif %}" class="card-img-top" alt="{{ issued_book.book.title }}">
+    <div class="card-body">
+      <h5 class="card-title">{{ issued_book.book.title }}</h5>
+      <p class="card-text">
+        <strong>Author:</strong> {{ issued_book.book.author }}<br>
+        <strong>Issued on:</strong> {{ issued_book.issue_date|date:"Y-m-d" }}<br>
+        <strong>Due on:</strong> {{ issued_book.due_date|date:"Y-m-d" }}<br>
+        {% if issued_book.returned %}
+          <strong>Returned on:</strong> {{ issued_book.return_date|date:"Y-m-d" }}<br>
+        {% else %}
+          <strong>Status:</strong> Not returned<br>
+        {% endif %}
+        <strong>Late fee:</strong> ${{ issued_book.late_fee }}<br>
+      </p>
+
+      {% if not issued_book.returned %}
+        <form action="{% url 'return_book' issued_book.id %}" method="post">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-danger">Return Book</button>
+        </form>
+      {% else %}
+        <p class="alert alert-success">This book has already been returned.</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}

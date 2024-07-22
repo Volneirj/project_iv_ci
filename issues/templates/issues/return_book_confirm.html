@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <h2>Confirm Return</h2>
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{ issued_book.book.title }}</h5>
+            <p class="card-text">
+                <strong>Author:</strong> {{ issued_book.book.author }}<br>
+                <strong>Issued on:</strong> {{ issued_book.issue_date|date:"Y-m-d" }}<br>
+                <strong>Due on:</strong> {{ issued_book.due_date|date:"Y-m-d" }}<br>
+                {% if issued_book.returned %}
+                <strong>Returned on:</strong> {{ issued_book.return_date|date:"Y-m-d" }}<br>
+                {% else %}
+                <strong>Status:</strong> Not returned<br>
+                {% endif %}
+                <strong>Late fee:</strong> ${{ issued_book.late_fee }}<br>
+            </p>
+
+            <form action="{% url 'return_book' issued_book.id %}" method="post">
+                {% csrf_token %}
+                <button type="submit" name="confirm" class="btn btn-danger">Confirm Return</button>
+                <button type="submit" name="cancel" class="btn btn-secondary">Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,24 +1,80 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 <div class="container">
   <h2>My Issued Books</h2>
-  <ul>
-    {% for issued_book in issued_books %}
-      <li>
-        <strong>{{ issued_book.book.title }}</strong> by {{ issued_book.book.author }}<br>
-        Issued on: {{ issued_book.issue_date|date:"Y-m-d" }}<br>
-        Due on: {{ issued_book.due_date|date:"Y-m-d" }}<br>
-        {% if issued_book.returned %}
-          Returned on: {{ issued_book.return_date|date:"Y-m-d" }}<br>
-        {% else %}
-          Status: Not returned<br>
+
+  {% if page_obj %}
+    <div class="row">
+      {% for issued_book in page_obj %}
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <img src="{% if issued_book.book.featured_image %}{{ issued_book.book.featured_image.url }}{% else %}{% static 'book_images/placeholder.jpg' %}{% endif %}" class="card-img-top image-container" alt="{{ issued_book.book.title }}">
+            <div class="card-body">
+              <h5 class="card-title">{{ issued_book.book.title }}</h5>
+              <p class="card-text">
+                <strong>Author:</strong> {{ issued_book.book.author }}<br>
+                <strong>Issued on:</strong> {{ issued_book.issue_date|date:"Y-m-d" }}<br>
+                <strong>Due on:</strong> {{ issued_book.due_date|date:"Y-m-d" }}<br>
+                {% if issued_book.returned %}
+                  <strong>Returned on:</strong> {{ issued_book.return_date|date:"Y-m-d" }}<br>
+                {% else %}
+                  <strong>Status:</strong> Not returned<br>
+                  <strong>Late fee:</strong> ${{ issued_book.late_fee }}<br>
+                  <form action="{% url 'return_book' issued_book.id %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger">Return Book</button>
+                  </form>
+                {% endif %}
+              </p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <!-- Pagination controls -->
+    <nav aria-label="Page navigation">
+      <ul class="pagination">
+        {% if page_obj.has_previous %}
+          <li class="page-item">
+            <a class="page-link" href="?page=1" aria-label="First">
+              <span aria-hidden="true">&laquo;&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
         {% endif %}
-        Late fee: ${{ issued_book.late_fee }}<br>
-      </li>
-    {% empty %}
-      <li>No books issued.</li>
-    {% endfor %}
-  </ul>
+
+        {% for num in page_obj.paginator.page_range %}
+          {% if page_obj.number == num %}
+            <li class="page-item active" aria-current="page"><span class="page-link">{{ num }}</span></li>
+          {% else %}
+            <li class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+          {% endif %}
+        {% endfor %}
+
+        {% if page_obj.has_next %}
+          <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}" aria-label="Last">
+              <span aria-hidden="true">&raquo;&raquo;</span>
+            </a>
+          </li>
+        {% endif %}
+      </ul>
+    </nav>
+
+  {% else %}
+    <p>No books issued.</p>
+  {% endif %}
 </div>
 {% endblock %}
