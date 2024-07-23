@@ -51,13 +51,13 @@
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == issued_books_list %}active{% endif %}" aria-current="page"
-                        href="{% url 'issued_books_list' %}">My Issued Books</a>
+                        <a class="nav-link {% if request.path == issued_books_list %}active{% endif %}"
+                            aria-current="page" href="{% url 'issued_books_list' %}">My Issued Books</a>
                     </li>
                     {% if user.is_staff %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == view_suggestions %}active{% endif %}" aria-current="page"
-                        href="{% url 'view_suggestions' %}">Check Book Suggestion</a>
+                        <a class="nav-link {% if request.path == view_suggestions %}active{% endif %}"
+                            aria-current="page" href="{% url 'view_suggestions' %}">Check Book Suggestion</a>
                     </li>
                     {% endif %}
                     <li class="nav-item">

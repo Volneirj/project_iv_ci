@@ -9,7 +9,7 @@ class Book(models.Model):
     isbn = models.CharField(max_length=13, unique=True)
     description = models.TextField(default='')
     featured_image = CloudinaryField('image', default='placeholder')
-    available_copies = models.PositiveIntegerField(default=1)
+    available_copies = models.PositiveIntegerField(default=0)
 
     def __str__(self):
         return self.title

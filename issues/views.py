@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
+from django.contrib import messages
 from django.utils import timezone
 from datetime import datetime, timedelta
 from .models import IssuedBook
@@ -10,6 +11,11 @@ from books.models import Book
 @login_required
 def issue_book(request, book_id):
     book = get_object_or_404(Book, pk=book_id)
+
+    #Warn user has no available copies"
+    if book.available_copies <= 0:       
+        messages.error(request, "Sorry, this book is out of stock and cannot be issued.")
+        return redirect('book_list')
 
     if request.method == 'POST':
         form = IssueBookForm(request.POST)

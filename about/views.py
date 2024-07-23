@@ -33,6 +33,5 @@ def view_suggestions(request):
     suggestions = BookSuggestion.objects.all()
     return render(request, 'about/view_suggestions.html', {'suggestions': suggestions})
 
-
 def thank_you_view(request):
     return render(request, 'about/thank_you.html')
