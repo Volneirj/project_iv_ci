@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+  <h2>About Us</h2>
+  <p>Information about the library...</p>
+  <a href="{% url 'suggest_book' %}" class="btn btn-primary">Suggest a Book</a>
+</div>
+{% endblock %}

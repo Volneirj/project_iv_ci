@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Book Suggestions</h2>
+    
+    {% if suggestions %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Book Title</th>
+                <th>Author</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Reason</th>
+                <th>Submitted At</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for suggestion in suggestions %}
+            <tr>
+                <td>{{ suggestion.book_title }}</td>
+                <td>{{ suggestion.author }}</td>
+                <td>{{ suggestion.name }}</td>
+                <td>{{ suggestion.email }}</td>
+                <td>{{ suggestion.reason }}</td>
+                <td>{{ suggestion.submitted_at }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="6">No suggestions available.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>No book suggestions have been made yet.</p>
+    {% endif %}
+</div>
+{% endblock %}
