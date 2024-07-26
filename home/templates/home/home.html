@@ -3,8 +3,7 @@
 {% block content %}
 <div class="container">
     <h1 class="main-title">Welcome to VILMASYS</h1>
-    <p>Your Virtual Library Management System</p>
-    
+    <p>Your Virtual Library Management System</p>    
     {% if top_books %}
     <div class="most-issued-books">
         <h2>Top 3 Most Issued Books</h2>
@@ -12,13 +11,15 @@
             {% for book in top_books %}
             <div class="col-md-4 mb-4">
                 <div class="card border-light shadow-sm">
-                    <div class="image-container">
-                        <img src="{{ book.featured_image.url }}" class="card-img-top" alt="{{ book.title }}">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">{{ book.title }}</h5>
-                        <p class="card-text">Issued {{ book.issue_count }} times</p>
-                    </div>
+                    <a href="{% url 'book_detail' book.id %}">
+                        <div class="image-container">
+                            <img src="{{ book.featured_image.url }}" class="card-img-top" alt="{{ book.title }}">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ book.title }}</h5>
+                            <p class="card-text">Issued {{ book.issue_count }} times</p>
+                        </div>
+                    </a>
                 </div>
             </div>
             {% endfor %}
