@@ -292,6 +292,8 @@ body {
     width: 100%; 
     height: 600px;
     overflow: hidden;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
   
   .card-img {
