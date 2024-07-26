@@ -13,6 +13,10 @@ body {
     color: #E84610;
 }
 
+.green-o {
+    color: #046e09;
+}
+
 .thin {
     font-weight: 300;
 }
@@ -26,7 +30,7 @@ body {
 }
 
 .main-bg {
-    background-color: #F9FAFC;
+    background-color: #f3f0ee;
 }
 
 .card {
@@ -194,6 +198,10 @@ body {
     max-width: 200px;
     text-align: center;
     transition: background-color 0.3s ease;
+}
+/* Issue a book */
+.padding-container{
+    padding-top: 2rem;
 }
 
 /* Sign up container */

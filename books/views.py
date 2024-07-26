@@ -5,11 +5,23 @@ from .models import Book
 from .forms import BookForm
 
 def book_list(request):
-    books = Book.objects.all().order_by('title')
+    # Get the search query from the GET parameters
+    query = request.GET.get('q', '')
+
+    # Filter books based on the search query
+    books = Book.objects.filter(title__icontains=query).order_by('title')
+
+    # Set up pagination
     paginator = Paginator(books, 6)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
-    return render(request, 'books/book_list.html', {'page_obj': page_obj})
+
+    context = {
+        'page_obj': page_obj,
+        'search_query': query,
+    }
+
+    return render(request, 'books/book_list.html', context)
 
 def book_detail(request, book_id):
     book = get_object_or_404(Book, pk=book_id)

@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="padding-container">
     <div class="signup-container">
         <h2>Login</h2>
         <form method="post">
@@ -10,4 +11,5 @@
         </form>
         <a href="{% url 'signup' %}">Don't have an account? Sign up</a>
     </div>
+</div>
 {% endblock %}

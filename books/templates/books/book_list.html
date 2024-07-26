@@ -9,6 +9,14 @@
   <a href="{% url 'book_create' %}" class="btn btn-primary">Add Book</a>
   {% endif %}
 
+  <!-- Search Form -->
+  <form method="get" class="mb-4">
+    <div class="form-container input-group">
+      <input type="text" name="q" class="form-control" placeholder="Search books..." value="{{ search_query }}">
+      <button type="submit" class="btn btn-outline-secondary">Search</button>
+    </div>
+  </form>
+
   <div class="row">
     {% for book in page_obj %}
     <div class="col-md-4 mb-4">
@@ -37,12 +45,12 @@
     <ul class="pagination">
       {% if page_obj.has_previous %}
       <li class="page-item">
-        <a class="page-link" href="?page=1" aria-label="First">
+        <a class="page-link" href="?page=1&q={{ search_query }}" aria-label="First">
           <span aria-hidden="true">&laquo;&laquo;</span>
         </a>
       </li>
       <li class="page-item">
-        <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+        <a class="page-link" href="?page={{ page_obj.previous_page_number }}&q={{ search_query }}" aria-label="Previous">
           <span aria-hidden="true">&laquo;</span>
         </a>
       </li>
@@ -52,18 +60,18 @@
       {% if page_obj.number == num %}
       <li class="page-item active" aria-current="page"><span class="page-link">{{ num }}</span></li>
       {% else %}
-      <li class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+      <li class="page-item"><a class="page-link" href="?page={{ num }}&q={{ search_query }}">{{ num }}</a></li>
       {% endif %}
       {% endfor %}
 
       {% if page_obj.has_next %}
       <li class="page-item">
-        <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+        <a class="page-link" href="?page={{ page_obj.next_page_number }}&q={{ search_query }}" aria-label="Next">
           <span aria-hidden="true">&raquo;</span>
         </a>
       </li>
       <li class="page-item">
-        <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}" aria-label="Last">
+        <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}&q={{ search_query }}" aria-label="Last">
           <span aria-hidden="true">&raquo;&raquo;</span>
         </a>
       </li>
