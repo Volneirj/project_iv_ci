@@ -12,11 +12,21 @@ from books.models import Book
 def issue_book(request, book_id):
     book = get_object_or_404(Book, pk=book_id)
 
-    #Warn user has no available copies"
+    #Warn user has no available copies
     if book.available_copies <= 0:       
         messages.error(request, "Sorry, this book is out of stock and cannot be issued.")
         return redirect('book_list')
 
+    # Check how many books the user has already issued
+    issued_books_count = IssuedBook.objects.filter(user=request.user).count()
+    issue_limit = 3  # Set the limit here
+
+    if issued_books_count >= issue_limit:
+        messages.error(request, f"You have reached your limit of "
+                       f"{issue_limit} issued books. Please return it to issue a new one.")
+        return redirect('book_list')  # Redirect to a page where the user can see the books
+
+    # Issue the book
     if request.method == 'POST':
         form = IssueBookForm(request.POST)
         if form.is_valid():
@@ -28,17 +38,19 @@ def issue_book(request, book_id):
                 due_date=due_date
             )
             book.available_copies -= 1
+            book.issued_times += 1
             book.save()
             return redirect('book_detail', book_id=book_id)
     else:
         form = IssueBookForm(initial={'book_id': book_id})
-
+    
     context = {
         'form': form,
         'book': book,
         'due_date': datetime.now() + timedelta(days=14)
     }
 
+    messages.success(request, "Book issued successfully!")
     return render(request, 'issues/issue_book.html', context)
 
 @login_required

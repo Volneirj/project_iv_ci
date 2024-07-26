@@ -10,6 +10,7 @@ class Book(models.Model):
     description = models.TextField(default='')
     featured_image = CloudinaryField('image', default='placeholder')
     available_copies = models.PositiveIntegerField(default=0)
+    issued_times = models.PositiveIntegerField(default=0)
 
     def __str__(self):
         return self.title
