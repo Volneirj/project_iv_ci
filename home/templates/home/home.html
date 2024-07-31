@@ -3,7 +3,8 @@
 {% block content %}
 <div class="container">
     <h1 class="main-title">Welcome to VILMASYS</h1>
-    <p>Your Virtual Library Management System</p>    
+    <p>Your Virtual Library Management System</p>
+    <!-- Top 3 books -->
     {% if top_books %}
     <div class="most-issued-books">
         <h2>Top 3 Most Issued Books</h2>
@@ -32,7 +33,7 @@
         <a class="book-item" href="{% url 'book_list' %}">Check our collection</a>
         {% if user.is_authenticated %}
         <a class="book-item" href="{% url 'issued_books_list' %}">My Issued List</a>
-        {% endif %}        
+        {% endif %}
     </div>
 </div>
 <!-- Benefits Section -->
@@ -47,7 +48,8 @@
                         <div class="card-body">
                             <i class="bi bi-check-square fs-3"></i>
                             <h5 class="card-title mt-3">24/7 Access</h5>
-                            <p class="card-text">Book and access library resources anytime, anywhere with our online platform.</p>
+                            <p class="card-text">Book and access library resources anytime, anywhere with our online
+                                platform.</p>
                         </div>
                     </div>
                 </div>
@@ -57,7 +59,8 @@
                         <div class="card-body">
                             <i class="bi bi-check-square fs-3"></i>
                             <h5 class="card-title mt-3">Seamless Reservations</h5>
-                            <p class="card-text">Easily reserve books online and get notified when they are available for pickup or download.</p>
+                            <p class="card-text">Easily reserve books online and get notified when they are available
+                                for pickup or download.</p>
                         </div>
                     </div>
                 </div>
@@ -77,7 +80,8 @@
                         <div class="card-body">
                             <i class="bi bi-check-square fs-3"></i>
                             <h5 class="card-title mt-3">User-Friendly Interface</h5>
-                            <p class="card-text">Enjoy a simple and intuitive interface that makes it easy to search and book resources.</p>
+                            <p class="card-text">Enjoy a simple and intuitive interface that makes it easy to search and
+                                book resources.</p>
                         </div>
                     </div>
                 </div>
@@ -87,7 +91,8 @@
                         <div class="card-body">
                             <i class="bi bi-check-square fs-3"></i>
                             <h5 class="card-title mt-3">Personalized Recommendations</h5>
-                            <p class="card-text">Receive book suggestions based on your reading history and preferences.</p>
+                            <p class="card-text">Receive book suggestions based on your reading history and preferences.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -97,7 +102,8 @@
                         <div class="card-body">
                             <i class="bi bi-check-square fs-3"></i>
                             <h5 class="card-title mt-3">Community Reviews</h5>
-                            <p class="card-text">Read reviews from other users and share your own thoughts on the books you've read.</p>
+                            <p class="card-text">Read reviews from other users and share your own thoughts on the books
+                                you've read.</p>
                         </div>
                     </div>
                 </div>
@@ -105,7 +111,7 @@
         </div>
     </div>
 </section>
-<!-- How to book section -->
+<!-- How to issue section -->
 <section id="how-to-book" class="text-center">
     <div class="container-fluid">
         <div class="container py-5">
@@ -115,7 +121,8 @@
                     <div class="card h-100">
                         <div class="card-body">
                             <h4 class="card-title">Create your account</h4>
-                            <p class="card-text">At the top of the page, use the signup link and with simple steps create your account.</p>
+                            <p class="card-text">At the top of the page, use the signup link and with simple steps
+                                create your account.</p>
                         </div>
                     </div>
                 </div>
@@ -131,10 +138,11 @@
                     <div class="card h-100">
                         <div class="card-body">
                             <h4 class="card-title">Issue it!</h4>
-                            <p class="card-text">Click on "Issue this book", check the information, and issue it. Simple as that!</p>
+                            <p class="card-text">Click on "Issue this book", check the information, and issue it. Simple
+                                as that!</p>
                         </div>
-                    </div>                    
-                </div>                
+                    </div>
+                </div>
             </div>
             <a class="btn btn-primary btn-lg mt-1" aria-current="page" href="/register/">Join Our Online Library</a>
         </div>

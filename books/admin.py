@@ -4,7 +4,10 @@ from .models import Book
 
 @admin.register(Book)
 class BookAdmin(SummernoteModelAdmin):
-    list_display = ('title', 'author', 'isbn', 'available_copies')
+    """
+    BookAdmin is a custom admin class for managing Book objects in the Django admin interface.
+    """
+    list_display = ('title', 'author', 'isbn', 'available_copies','issued_times')
     search_fields = ['title']
     list_filter = ('available_copies',)
     summernote_fields = ('description',)

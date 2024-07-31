@@ -4,6 +4,7 @@
 <div class="container mt-5">
     <h2>Suggest a Book</h2>
     <div class="form-container">
+        <!-- Start the form element -->
         <form method="post">
             {% csrf_token %}
             <div class="form-group">
@@ -28,6 +29,7 @@
             </div>            
         </form>               
     </div>
+    <!-- Submit button to send the form -->
     <button type="submit" class="btn btn-primary">Submit</button> 
 </div>
 {% endblock %}
