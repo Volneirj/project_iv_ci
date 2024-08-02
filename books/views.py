@@ -1,8 +1,10 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import user_passes_test, login_required
 from django.core.paginator import Paginator
-from .models import Book
-from .forms import BookForm
+from django.contrib import messages
+from .models import Book, BookSuggestion
+from .forms import BookForm, BookSuggestionForm
+
 
 def book_list(request):
     # Get the search query from the GET parameters
@@ -66,3 +68,32 @@ def book_delete(request, book_id):
         book.delete()
         return redirect('book_list')
     return render(request, 'books/book_confirm_delete.html', {'book': book})
+
+def suggest_book_view(request):
+    if request.method == 'POST':
+        form = BookSuggestionForm(request.POST)
+        if form.is_valid():
+            BookSuggestion.objects.create(
+                book_title=form.cleaned_data['book_title'],
+                author=form.cleaned_data['author'],
+                name=form.cleaned_data['name'],
+                email=form.cleaned_data['email'],
+                reason=form.cleaned_data['reason']
+            )
+            return redirect('thank_you')
+    else:
+        form = BookSuggestionForm()
+
+    return render(request, 'books/suggest_book.html', {'form': form})
+
+def admin_required(view_func):
+    decorated_view_func = user_passes_test(lambda u: u.is_superuser)(view_func)
+    return decorated_view_func
+
+@admin_required
+def view_suggestions(request):
+    suggestions = BookSuggestion.objects.all()
+    return render(request, 'books/view_suggestions.html', {'suggestions': suggestions})
+
+def thank_you_view(request):
+    return render(request, 'books/thank_you.html')

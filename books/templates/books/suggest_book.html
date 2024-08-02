@@ -26,10 +26,13 @@
             <div class="form-group">
                 <label for="id_reason">{{ form.reason.label }}</label>
                 {{ form.reason }}
-            </div>            
+            </div>
+            <div class="padding-container">
+            <!-- Submit button to send the form -->
+            <button type="submit" class="btn btn-primary">Submit</button> 
+            </div> 
+                       
         </form>               
-    </div>
-    <!-- Submit button to send the form -->
-    <button type="submit" class="btn btn-primary">Submit</button> 
+    </div>   
 </div>
 {% endblock %}

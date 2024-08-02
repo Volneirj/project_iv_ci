@@ -257,13 +257,6 @@ body {
     background-color: #0056b3;
 }
 
-/* Ensure container elements look good even on smaller screens */
-@media (max-width: 600px) {
-    .signup-container {
-        width: 90%;
-    }
-}
-
 /* Centering the search form and styling */
 .signup-container {
     width: 60%;
@@ -324,6 +317,12 @@ body {
     padding-bottom: 1rem;
 }
 
+/* Ensure container elements look good even on smaller screens */
+@media (max-width: 600px) {
+    .signup-container {
+        width: 90%;
+    }
+}
 
 @media (max-width: 767px) {
     .form-container {
