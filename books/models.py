@@ -3,7 +3,16 @@ from cloudinary.models import CloudinaryField
 
 class Book(models.Model):
     """
-    Book represents a book in the library system.
+    Represents a book in the library system.
+
+    Attributes:
+        title (str): The title of the book.
+        author (str): The author of the book.
+        isbn (str): The unique ISBN number of the book.
+        description (str): A brief description of the book.
+        featured_image (CloudinaryField): An image representing the book's cover.
+        available_copies (int): The number of available copies of the book.
+        issued_times (int): The number of times the book has been issued.
     """
     title = models.CharField(max_length=255)
     author = models.CharField(max_length=255)
@@ -17,6 +26,18 @@ class Book(models.Model):
         return self.title
     
 class BookSuggestion(models.Model):
+    """
+    Model to save the information in the database when someone suggest a book
+    through the form
+
+    Attributes:
+        book_title (str): The title of the suggested book.
+        author (str): The author of the suggested book.
+        name (str): The name of the person suggesting the book (optional).
+        email (str): The email of the person suggesting the book (optional).
+        reason (str): The reason for suggesting the book.
+        submitted_at (datetime): The date and time when the suggestion was submitted.
+    """
     book_title = models.CharField(max_length=100)
     author = models.CharField(max_length=100)
     name = models.CharField(max_length=100, blank=True)

@@ -71,6 +71,9 @@ def issue_book(request, book_id):
 def issued_books_list(request):
     """
     View to display a list of books issued by the logged-in user.
+
+    Returns:
+        HttpResponse: The rendered template response.
     """
     issued_books = IssuedBook.objects.filter(user=request.user).order_by('-issue_date')
 

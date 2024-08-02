@@ -6,6 +6,15 @@ from books.models import Book
 class IssuedBook(models.Model):
     """
     IssuedBook model represents the record of a book issued to a user in the library system.
+
+    Attributes:
+        book (ForeignKey): Reference to the Book model, indicating which book is issued.
+        user (ForeignKey): Reference to the User model, indicating which user has issued the book.
+        issue_date (DateTimeField): The date and time when the book was issued, set automatically on creation.
+        return_date (DateTimeField): The date and time when the book was returned, can be null or blank.
+        due_date (DateTimeField): The date and time by which the book should be returned, default is 14 days from issue date.
+        returned (BooleanField): A flag indicating whether the book has been returned, default is False.
+
     Methods:
         __str__(): Returns a string representation of the issued book and user.
         late_fee(): Calculates and returns the late fee based on the return date and due date.
@@ -23,10 +32,12 @@ class IssuedBook(models.Model):
     def late_fee(self):
         """
         Calculates the late fee for the issued book.
-        
+
+        If the book is returned after the due date, the late fee is calculated based on the number of days late.
+        The daily fee is set to $1.
+
         Returns:
             int: The total late fee based on the number of days late.
-            daily_fee = price in $$
         """
         daily_fee = 1
         if self.return_date and self.return_date > self.due_date:
