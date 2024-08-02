@@ -6,7 +6,9 @@
   <h2>Book List</h2>
 
   {% if user.is_authenticated and user.is_superuser %}
-  <a href="{% url 'book_create' %}" class="btn btn-primary">Add Book</a>
+  <div class="padding-container">
+    <a href="{% url 'book_create' %}" class="btn btn-styling btn-primary">Add Book</a>
+  </div> 
   {% endif %}
 
   <!-- Search Form -->
