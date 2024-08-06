@@ -28,7 +28,7 @@
             {% if book.featured_image %}
             <img src="{{ book.featured_image.url }}" class="card-img" alt="{{ book.title }}">
             {% else %}
-            <img src="{% static 'book_images/placeholder.jpg' %}" class="card-img" alt="placeholder image">
+            <img src="{% static 'book_images/media/placeholder.jpg' %}" class="card-img" alt="placeholder image">
             {% endif %}
           </div>
           <div class="card-body">
