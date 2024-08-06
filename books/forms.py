@@ -15,20 +15,20 @@ class BookForm(forms.ModelForm):
         model = Book
         fields = ['title', 'author', 'isbn', 'description', 'featured_image', 'available_copies']
 
-        def clean_available_copies(self):
-            """
-            Ensures that the number of available copies is not negative.
+    def clean_available_copies(self):
+        """
+        Ensures that the number of available copies is not negative.
 
-            Raises:
-                forms.ValidationError: If the available_copies value is negative.
-            
-            Returns:
-                int: The validated number of available copies.
-            """
-            available_copies = self.cleaned_data.get('available_copies')
-            if available_copies < 0:
-                raise forms.ValidationError("Available copies cannot be negative.")
-            return available_copies
+        Raises:
+            forms.ValidationError: If the available_copies value is negative.
+        
+        Returns:
+            int: The validated number of available copies.
+        """
+        available_copies = self.cleaned_data.get('available_copies')
+        if available_copies < 0:
+            raise forms.ValidationError("Ensure this value is greater than or equal to 0.")
+        return available_copies
 
 
 class BookSuggestionForm(forms.Form):
