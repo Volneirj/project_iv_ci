@@ -22,7 +22,7 @@
   <div class="row">
     {% for book in page_obj %}
     <div class="col-md-4 mb-4">
-      <div class="card">
+      <div class="card shadow-sm">
         <a href="{% url 'book_detail' book.id %}">
           <div class="image-container">
             {% if book.featured_image %}

@@ -4,6 +4,14 @@
 <div class="container">
     <h1 class="main-title">Welcome to VILMASYS</h1>
     <p>Your Virtual Library Management System</p>
+    <div class="book-list-container padding-container">
+        <a class="btn btn-styling" href="{% url 'book_list' %}">Check our collection</a>
+        <a href="{% url 'suggest_book' %}" class="btn btn-styling">Do not see the book you are looking for? Suggest
+            it!</a>
+        {% if user.is_authenticated %}
+        <a class="btn btn-styling" href="{% url 'issued_books_list' %}">My Issued List</a>
+        {% endif %}
+    </div>
     <!-- Top 3 books -->
     {% if top_books %}
     <div class="most-issued-books">
@@ -29,14 +37,6 @@
     {% else %}
     <p>No books have been issued yet.</p>
     {% endif %}
-    <div class="book-list-container">
-        <a class="btn btn-styling" href="{% url 'book_list' %}">Check our collection</a>
-        <a href="{% url 'suggest_book' %}" class="btn btn-styling">Do not see the book you are looking for? Suggest
-            it!</a>
-        {% if user.is_authenticated %}
-        <a class="btn btn-styling" href="{% url 'issued_books_list' %}">My Issued List</a>
-        {% endif %}
-    </div>
 </div>
 <!-- Benefits Section -->
 <section id="benefits" class="text-center">
@@ -116,7 +116,7 @@
     <div class="container py-5">
         <h3 class="mb-5">How to issue a book</h3>
         <div class="row justify-content-center">
-            <div class="col-md-4 d-flex justify-content-center mb-4 px-0 px-lg-2">
+            <div class="col-md-4 d-flex justify-content-center mb-4 px-0 px-lg-2 shadow-sm">
                 <div class="card h-100">
                     <div class="card-body">
                         <h4 class="card-title">Create your account</h4>
@@ -125,7 +125,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 d-flex justify-content-center mb-4 px-0 px-lg-2">
+            <div class="col-md-4 d-flex justify-content-center mb-4 px-0 px-lg-2 shadow-sm">
                 <div class="card h-100">
                     <div class="card-body">
                         <h4 class="card-title">Visit our collection</h4>
@@ -133,7 +133,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 d-flex justify-content-center mb-4 px-0 px-lg-2">
+            <div class="col-md-4 d-flex justify-content-center mb-4 px-0 px-lg-2 shadow-sm">
                 <div class="card h-100">
                     <div class="card-body">
                         <h4 class="card-title">Issue it!</h4>

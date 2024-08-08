@@ -43,6 +43,10 @@
     background-color: #188181;
 }
 
+.shadow-sm {
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .3) !important;
+}
+
 .scale {
     width: 100%;
     height: auto;
@@ -163,7 +167,7 @@
     color: black;
     font-family: Lato, sans-serif;
     font-size: 1rem;
-    font-weight: 700; 
+    font-weight: 700;
 }
 
 .nav-link.active {
@@ -214,13 +218,14 @@
     text-align: center;
     transition: background-color 0.3s ease;
 }
+
 /* Issue a book */
-.padding-container{
+.padding-container {
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
-/* Buttons */ 
+/* Buttons */
 .btn-styling {
     background-color: #4682B4;
     color: #ffffff;
@@ -334,8 +339,8 @@
 /* About page form */
 .form-container {
     max-width: 600px;
-    margin: 0 auto; 
-    padding: 0 15px; 
+    margin: 0 auto;
+    padding: 0 15px;
     padding-bottom: 1rem;
 }
 
