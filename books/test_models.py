@@ -9,9 +9,19 @@ import os
 from cloudinary import CloudinaryImage
 
 class BookModelTest(TestCase):
+    """
+    Test suite for the Book model.
+    
+    This class contains tests to validate the behavior of the Book model, including 
+    the creation of a book instance and optional testing of Cloudinary image uploads.
+    """
 
     # Set True to do the cloudinary upload image test
     test_cloud_image = False
+    """    
+    If set to True, tests related to Cloudinary image uploads will be executed.
+    This setting is to avoid to upload a new image everytime the tests are running in case of debug.
+    """
 
     def setUp(self):
         self.book = Book.objects.create(
