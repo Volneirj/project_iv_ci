@@ -1,6 +1,7 @@
 from django.db import models
+from django.utils import timezone
 from django.contrib.auth.models import User
-from datetime import datetime, timedelta
+from datetime import timedelta
 from books.models import Book
 
 class IssuedBook(models.Model):
@@ -23,7 +24,7 @@ class IssuedBook(models.Model):
     user = models.ForeignKey(User, related_name='issued_books', on_delete=models.CASCADE)
     issue_date = models.DateTimeField(auto_now_add=True)
     return_date = models.DateTimeField(null=True, blank=True)
-    due_date = models.DateTimeField(default=datetime.now() + timedelta(days=14))
+    due_date = models.DateTimeField(default=timezone.now() + timedelta(days=14))
     returned = models.BooleanField(default=False)
 
     def __str__(self):
