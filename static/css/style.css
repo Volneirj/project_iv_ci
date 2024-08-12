@@ -288,6 +288,10 @@
     background-color: #4682B4;
 }
 
+.text-muted {
+    color: black !important;
+}
+
 /* Centering the search form and styling */
 .signup-container {
     width: 60%;

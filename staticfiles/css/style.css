@@ -239,8 +239,9 @@
 
 /* Centering and styling the signup container */
 .signup-container {
-    background: #ffffff;
+    background: #FAEBD7;
     padding: 2rem;
+    font-weight: 700;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
@@ -256,7 +257,7 @@
 }
 
 .signup-container form {
-    width: 300px;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -273,7 +274,7 @@
 }
 
 .signup-container form button {
-    width: 100%;
+    width: 50%;
     padding: 0.75rem;
     background-color: #4682B4;
     color: #ffffff;
@@ -285,6 +286,10 @@
 
 .signup-container form button:hover {
     background-color: #4682B4;
+}
+
+.text-muted {
+    color: black !important;
 }
 
 /* Centering the search form and styling */
