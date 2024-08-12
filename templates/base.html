@@ -12,7 +12,7 @@
 
 <head>
     <title>VIL-MASYS</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Favicon -->
     <link rel="icon" href="/static/favicon/favicon.png" type="image/png">
@@ -20,7 +20,9 @@
     <!-- Google Fonts CSS -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -90,9 +92,9 @@
                 </ul>
                 <span class="navbar-text text-muted">
                     {% if user.is_authenticated %}
-                    <p class="text-end m-3">You are logged in as {{ user }}</p>
+                    <span class="text-end m-3">You are logged in as {{ user }}</span>
                     {% else %}
-                    <p class="text-end m-3">You are not logged in</p>
+                    <span class="text-end m-3">You are not logged in</span>
                     {% endif %}
                 </span>
             </div>

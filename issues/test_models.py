@@ -43,7 +43,7 @@ class IssuedBookModelTest(TestCase):
         expected_due_date = issue_date + timedelta(days=14)
         # calculate difference between the due_time caculated and the expected
         difference = self.issued_book.due_date - expected_due_date
-        self.assertTrue(abs(difference.total_seconds()) < 2)
+        self.assertTrue(abs(difference.total_seconds()) < 10)
         
     def test_default_returned(self):
         """

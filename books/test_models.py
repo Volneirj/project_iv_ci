@@ -17,7 +17,7 @@ class BookModelTest(TestCase):
     """
 
     # Set True to do the cloudinary upload image test
-    test_cloud_image = False
+    test_cloud_image = True
     """    
     If set to True, tests related to Cloudinary image uploads will be executed.
     This setting is to avoid to upload a new image everytime the tests are running in case of debug.
