@@ -1,6 +1,7 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
 
+
 class Book(models.Model):
     """
     Represents a book in the library system.
@@ -10,7 +11,7 @@ class Book(models.Model):
         author (str): The author of the book.
         isbn (str): The unique ISBN number of the book.
         description (str): A brief description of the book.
-        featured_image (CloudinaryField): An image representing the book's cover.
+        featured_image (CloudinaryField): An the book's cover image.
         available_copies (int): The number of available copies of the book.
         issued_times (int): The number of times the book has been issued.
     """
@@ -24,7 +25,8 @@ class Book(models.Model):
 
     def __str__(self):
         return self.title
-    
+
+
 class BookSuggestion(models.Model):
     """
     Model to save the information in the database when someone suggest a book
@@ -36,7 +38,7 @@ class BookSuggestion(models.Model):
         name (str): The name of the person suggesting the book (optional).
         email (str): The email of the person suggesting the book (optional).
         reason (str): The reason for suggesting the book.
-        submitted_at (datetime): The date and time when the suggestion was submitted.
+        submitted_at (datetime): The date and time when was submitted.
     """
     book_title = models.CharField(max_length=100)
     author = models.CharField(max_length=100)

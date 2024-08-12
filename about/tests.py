@@ -1,6 +1,7 @@
 from django.test import TestCase
 from django.urls import reverse
 
+
 class AboutPageTest(TestCase):
 
     def test_about_page_status_code(self):

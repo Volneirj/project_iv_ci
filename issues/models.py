@@ -4,27 +4,37 @@ from django.contrib.auth.models import User
 from datetime import timedelta
 from books.models import Book
 
+
 class IssuedBook(models.Model):
     """
-    IssuedBook model represents the record of a book issued to a user in the library system.
+    IssuedBook model represents the record of a book issued
+    to a user in the library system.
 
     Attributes:
-        book (ForeignKey): Reference to the Book model, indicating which book is issued.
-        user (ForeignKey): Reference to the User model, indicating which user has issued the book.
-        issue_date (DateTimeField): The date and time when the book was issued, set automatically on creation.
-        return_date (DateTimeField): The date and time when the book was returned, can be null or blank.
-        due_date (DateTimeField): The date and time by which the book should be returned, default is 14 days from issue date.
-        returned (BooleanField): A flag indicating whether the book has been returned, default is False.
+    book (ForeignKey): indicating which book is issued.
+    user (ForeignKey): indicating which user has issued the book.
+    issue_date (DateTimeField): The date when the book was issued.
+    return_date (DateTimeField): The date when the book was returned.
+    due_date (DateTimeField): The date by which the book should be returned.
+    returned (BooleanField): A flag indicating if book has been returned.
 
     Methods:
-        __str__(): Returns a string representation of the issued book and user.
-        late_fee(): Calculates and returns the late fee based on the return date and due date.
+        __str__():
+        Returns a string representation of the issued book and user.
+        late_fee():
+        Calculates and returns the late fee based on
+        the return date and due date.
     """
-    book = models.ForeignKey(Book, related_name='issued_books', on_delete=models.CASCADE)
-    user = models.ForeignKey(User, related_name='issued_books', on_delete=models.CASCADE)
+    book = models.ForeignKey(Book,
+                             related_name='issued_books',
+                             on_delete=models.CASCADE)
+    user = models.ForeignKey(User,
+                             related_name='issued_books',
+                             on_delete=models.CASCADE)
     issue_date = models.DateTimeField(auto_now_add=True)
     return_date = models.DateTimeField(null=True, blank=True)
-    due_date = models.DateTimeField(default=timezone.now() + timedelta(days=14))
+    due_date = models.DateTimeField(
+        default=timezone.now() + timedelta(days=14))
     returned = models.BooleanField(default=False)
 
     def __str__(self):
@@ -34,7 +44,8 @@ class IssuedBook(models.Model):
         """
         Calculates the late fee for the issued book.
 
-        If the book is returned after the due date, the late fee is calculated based on the number of days late.
+        If the book is returned after the due date,
+        the late fee is calculated based on the number of days late.
         The daily fee is set to $1.
 
         Returns:
@@ -43,5 +54,5 @@ class IssuedBook(models.Model):
         daily_fee = 1
         if self.return_date and self.return_date > self.due_date:
             days_late = (self.return_date - self.due_date).days
-            return days_late * daily_fee  
+            return days_late * daily_fee
         return 0

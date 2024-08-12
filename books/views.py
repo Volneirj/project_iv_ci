@@ -8,10 +8,12 @@ from .forms import BookForm, BookSuggestionForm
 
 def book_list(request):
     """
-    Displays a list of books, with optional search functionality and pagination.
+    Displays a list of books, with optional search
+    functionality and pagination.
 
     Returns:
-        HttpResponse: The rendered book list page with the list of books, search query, and pagination.
+        HttpResponse: The rendered book list page
+        with the list of books, search query, and pagination.
     """
     # Get the search query from the GET parameters
     query = request.GET.get('q', '')
@@ -31,6 +33,7 @@ def book_list(request):
 
     return render(request, 'books/book_list.html', context)
 
+
 def book_detail(request, book_id):
     """
     Displays the details of a specific book.
@@ -44,7 +47,6 @@ def book_detail(request, book_id):
     book = get_object_or_404(Book, pk=book_id)
     return render(request, 'books/book_detail.html', {'book': book})
 
-from django.contrib.auth.decorators import user_passes_test
 
 def is_admin(user):
     """
@@ -58,7 +60,8 @@ def is_admin(user):
     """
     return user.is_superuser
 
-# Book CRUD front-end logic 
+
+# Book CRUD front-end logic
 @login_required
 @user_passes_test(is_admin)
 def book_create(request):
@@ -66,7 +69,8 @@ def book_create(request):
     Handles the creation of a new book. Only accessible by admin users.
 
     Returns:
-        HttpResponse: The rendered book creation form, or a redirect to the book list upon successful creation.
+        HttpResponse: The rendered book creation form,
+        or a redirect to the book list upon successful creation.
     """
     if request.method == 'POST':
         form = BookForm(request.POST, request.FILES)
@@ -75,7 +79,11 @@ def book_create(request):
             return redirect('book_list')
     else:
         form = BookForm()
-    return render(request, 'books/book_form.html', {'form': form, 'title': 'Add Book'})
+    return render(
+        request, 'books/book_form.html',
+        {'form': form, 'title': 'Add Book'}
+    )
+
 
 @login_required
 @user_passes_test(is_admin)
@@ -87,7 +95,8 @@ def book_update(request, book_id):
         book_id: The ID of the book to update.
 
     Returns:
-        HttpResponse: The rendered book update form, or a redirect to the book detail page upon successful update.
+        HttpResponse: The rendered book update form,
+        or a redirect to the book detail page upon successful update.
     """
     book = get_object_or_404(Book, pk=book_id)
     if request.method == 'POST':
@@ -97,19 +106,26 @@ def book_update(request, book_id):
             return redirect('book_detail', book_id=book.id)
     else:
         form = BookForm(instance=book)
-    return render(request, 'books/book_form.html', {'form': form, 'title': 'Update Book'})
+    return render(
+        request,
+        'books/book_form.html',
+        {'form': form, 'title': 'Update Book'}
+    )
+
 
 @login_required
 @user_passes_test(is_admin)
 def book_delete(request, book_id):
     """
-    Handles the deletion of an existing book. Only accessible by admin users.
+    Handles the deletion of an existing book.
+    Only accessible by admin users.
 
     Args:
         book_id: The ID of the book to delete.
 
     Returns:
-        HttpResponse: The rendered book deletion confirmation page, or a redirect to the book list upon successful deletion.
+        HttpResponse: The rendered book deletion confirmation page,
+        or a redirect to the book list upon successful deletion.
     """
     book = get_object_or_404(Book, pk=book_id)
     if request.method == 'POST':
@@ -117,12 +133,15 @@ def book_delete(request, book_id):
         return redirect('book_list')
     return render(request, 'books/book_confirm_delete.html', {'book': book})
 
+
 def suggest_book_view(request):
     """
     Handles the submission of a book suggestion by users.
 
     Returns:
-        HttpResponse: The rendered book suggestion form, or a redirect to the thank you page upon successful submission.
+        HttpResponse: The rendered book suggestion form,
+        or a redirect to the thank you page upon successful
+        submission.
     """
     if request.method == 'POST':
         form = BookSuggestionForm(request.POST)
@@ -140,12 +159,14 @@ def suggest_book_view(request):
 
     return render(request, 'books/suggest_book.html', {'form': form})
 
+
 def admin_required(view_func):
     """
     Decorator that ensures the user is an admin.
     """
     decorated_view_func = user_passes_test(lambda u: u.is_superuser)(view_func)
     return decorated_view_func
+
 
 @admin_required
 def view_suggestions(request):
@@ -154,9 +175,13 @@ def view_suggestions(request):
 
     Returns:
         HttpResponse: The rendered book suggestions list page.
-    """    
+    """
     suggestions = BookSuggestion.objects.all()
-    return render(request, 'books/view_suggestions.html', {'suggestions': suggestions})
+    return render(
+        request, 'books/view_suggestions.html',
+        {'suggestions': suggestions}
+    )
+
 
 def thank_you_view(request):
     """

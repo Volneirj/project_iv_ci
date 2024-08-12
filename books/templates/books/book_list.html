@@ -25,10 +25,10 @@
       <div class="card shadow-sm">
         <a href="{% url 'book_detail' book.id %}">
           <div class="image-container">
-            {% if book.featured_image %}
-            <img src="{{ book.featured_image.url }}" class="card-img" alt="{{ book.title }}">
+            {% if "placeholder" in book.featured_image.url %}
+            <img src="{% static 'media/book_images/placeholder.jpg' %}" class="card-img" alt="placeholder image">
             {% else %}
-            <img src="{% static 'book_images/media/placeholder.jpg' %}" class="card-img" alt="placeholder image">
+            <img src="{{ book.featured_image.url }}" class="card-img" alt="{{ book.title }}">
             {% endif %}
           </div>
           <div class="card-body">

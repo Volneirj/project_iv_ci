@@ -1,7 +1,5 @@
 # Table of Contents
 
-- [Automated Testing](#automated-testing)
-- [Manual Testing](#manual-testing)
 - [Code Validation](#code-validation)
   - [HTML](#html)
   - [CSS](#css)
@@ -10,9 +8,15 @@
 - [Responsiveness and Device Testing](#responsiveness-and-device-testing)
 - [Browser Testing](#browser-testing)
 - [Lighthouse Testing](#lighthouse-testing)
-- [User Story Testing](#user-story-testing)
+- [Automated Testing](#automated-testing)
+- [Manual Testing](#manual-testing)
 
 
+
+
+## Lighthouse Testing
+
+Lighthouse validation was run on all pages (both mobile and desktop) in order to check performance, accessibility, best practices and CEO.
 
 ## Automated Testing
 
@@ -26,7 +30,7 @@ To run the tests, I executed the following command in the terminal:
 
 Total Count of Automated Tests: 41
 
-![screenshot](static/images/readme_images/testing/automated_testing/screen-terminal.jpg)  
+![screenshot](static/images/readme_images/testing/screen-terminal.jpg)  
 
 To create the coverage report, I run the following commands:
 

@@ -1,19 +1,27 @@
 from django import forms
 from .models import Book, BookSuggestion
 
+
 class BookForm(forms.ModelForm):
     """
     A form for creating and updating Book instances.
 
     Meta:
-        fields (list): The fields of the model that will be included in the form.
-    
+        fields (list): The fields of the model that
+        will be included in the form.
     Methods:
-        clean_available_copies: Validates that the available_copies field is not negative.
+        clean_available_copies: Validates that
+        the available_copies field is not negative.
     """
     class Meta:
         model = Book
-        fields = ['title', 'author', 'isbn', 'description', 'featured_image', 'available_copies']
+        fields = ['title',
+                  'author',
+                  'isbn',
+                  'description',
+                  'featured_image',
+                  'available_copies'
+                  ]
 
     def clean_available_copies(self):
         """
@@ -21,13 +29,15 @@ class BookForm(forms.ModelForm):
 
         Raises:
             forms.ValidationError: If the available_copies value is negative.
-        
+
         Returns:
             int: The validated number of available copies.
         """
         available_copies = self.cleaned_data.get('available_copies')
         if available_copies < 0:
-            raise forms.ValidationError("Ensure this value is greater than or equal to 0.")
+            raise forms.ValidationError(
+                "Ensure this value is greater than or equal to 0."
+                )
         return available_copies
 
 
@@ -38,32 +48,32 @@ class BookSuggestionForm(forms.Form):
     Fields:
         book_title (CharField): The title of the suggested book.
         author (CharField): The author of the suggested book.
-        name (CharField): The name of the person suggesting the book (optional).
-        email (EmailField): The email of the person suggesting the book (optional).
+        name (CharField): The name of the person suggesting the book.
+        email (EmailField): The email of the person suggesting the book.
         reason (CharField): The reason for suggesting the book.
     """
     book_title = forms.CharField(
-        max_length=100, 
+        max_length=100,
         label='Book Title',
         widget=forms.TextInput(attrs={'class': 'form-control'})
     )
     author = forms.CharField(
-        max_length=100, 
+        max_length=100,
         label='Author',
         widget=forms.TextInput(attrs={'class': 'form-control'})
     )
     name = forms.CharField(
-        max_length=100, 
-        required=False, 
+        max_length=100,
+        required=False,
         label='Your Name (Optional)',
         widget=forms.TextInput(attrs={'class': 'form-control'})
     )
     email = forms.EmailField(
-        required=False, 
+        required=False,
         label='Email (Optional)',
         widget=forms.EmailInput(attrs={'class': 'form-control'})
     )
     reason = forms.CharField(
-        widget=forms.Textarea(attrs={'class': 'form-control', 'rows': 4}), 
+        widget=forms.Textarea(attrs={'class': 'form-control', 'rows': 4}),
         label='Reason for Suggestion'
     )

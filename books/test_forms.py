@@ -2,6 +2,7 @@ from django.test import TestCase
 from .models import BookSuggestion, Book
 from .forms import BookSuggestionForm, BookForm
 
+
 class BookSuggestionModelTest(TestCase):
     def test_book_suggestion_creation(self):
         """
@@ -20,6 +21,7 @@ class BookSuggestionModelTest(TestCase):
         self.assertEqual(suggestion.name, "Test User")
         self.assertEqual(suggestion.email, "test@example.com")
         self.assertEqual(suggestion.reason, "This is a test suggestion.")
+
 
 class BookSuggestionFormTest(TestCase):
     def test_valid_form(self):
@@ -109,11 +111,13 @@ class BookSuggestionFormTest(TestCase):
         self.assertEqual(suggestion.email, 'test@example.com')
         self.assertEqual(suggestion.reason, 'This is a test suggestion.')
 
+
 class BookFormTest(TestCase):
 
     def test_valid_book_form(self):
         """
-        Test that the BookForm is valid with all required fields correctly filled.
+        Test that the BookForm is valid with all
+        required fields correctly filled.
         """
         form_data = {
             'title': 'Test Book',
@@ -124,7 +128,7 @@ class BookFormTest(TestCase):
         }
         form = BookForm(data=form_data)
         self.assertTrue(form.is_valid())
-    
+
     def test_negative_available_copies(self):
         """
         Test that the BookForm is invalid if the available_copies is negative.
@@ -139,7 +143,10 @@ class BookFormTest(TestCase):
         form = BookForm(data=form_data)
         self.assertFalse(form.is_valid())
         self.assertIn('available_copies', form.errors)
-        self.assertEqual(form.errors['available_copies'], ["Ensure this value is greater than or equal to 0."])
+        self.assertEqual(
+            form.errors['available_copies'],
+            ["Ensure this value is greater than or equal to 0."]
+            )
 
     def test_blank_fields(self):
         """
@@ -171,7 +178,7 @@ class BookFormTest(TestCase):
             'isbn': '1234567890123',
             'description': 'A test book description.',
             'available_copies': 5,
-            'featured_image': None 
+            'featured_image': None
         }
         form = BookForm(data=form_data)
         self.assertTrue(form.is_valid())
