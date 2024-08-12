@@ -230,8 +230,9 @@
 
 /* Buttons */ 
 .btn-styling {
-    background-color: #4682B4;
+    background-color: #367bb3;
     color: #ffffff;
+    font-weight: bold;
 }
 
 /* Sign up container */
