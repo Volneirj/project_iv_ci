@@ -32,7 +32,7 @@ LOGOUT_REDIRECT_URL = '/'
 SECRET_KEY = 'SECRET_KEY_S'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
@@ -50,6 +50,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_extensions',
     'cloudinary_storage',
+    'crispy_forms',
+    'crispy_bootstrap4',
     'django_summernote',
     'cloudinary',
     'about',
@@ -167,3 +169,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
