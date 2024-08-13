@@ -13,23 +13,28 @@ This project serves as an educational resource, demonstrating the application of
 
 ### Existing Features
 
-#### Main Menu
+#### Navigation bar
 
-- The main menu show the options available for the user.
-- The options can be selected usin the number 1 to 4.
+- The Navigation bar is customized for the three type of logins: Administrator, Registred user and no registered users.
 
-![Main Menu](docs/readme_images/main-menu.jpg)
+<details><summary>Administrator Navbar</summary><img src="static/media/readme_images/features/menu-adm.jpg"></details>
+<details><summary>Administrator Navbar</summary><img src="static/media/readme_images/features/menu-normal-user.jpg"></details>
+<details><summary>Administrator Navbar</summary><img src="static/media/readme_images/features/menu-no-user.jpg"></details>
 
-#### Add new report
 
-- On this option the user will answer the questions where will be processed and transfered for a file on
-google drive.
+#### Top 3 Books
 
-![New Report](docs/readme_images/new-report.jpg)
+- The "3 Most Issued Books" section enhances user engagement by showcasing popular titles and guiding users toward trending books, while also promoting the circulation of these frequently borrowed items.
 
-#### Show All Reports
+<details><summary>Administrator Navbar</summary><img src="static/media/readme_images/features/top-issued-books.jpg"></details>
 
-- On this option the user can acess all the saving data on googlesheet.
+#### Website Introduction Features
+
+- Why issue with us section brings the benefits of use the booking system in this online plataform. 
+- How to issue a book, shows the new user how simple is to issue a book in our plataform.
+- The button to join the library after the features explained is to encourage the user to join the website.
+
+<details><summary>Administrator Navbar</summary><img src="static/media/readme_images/features/features.jpg"></details>
 
 ![Show Reports](docs/readme_images/show-reports.jpg)
 
