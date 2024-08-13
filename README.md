@@ -1,131 +1,310 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# VIL-MASYS - Virtual Library Management System
 
-Welcome USER_NAME,
+Welcome to VIL-MASYS, the Virtual Library Management System designed to streamline the management of libraries by providing a robust, user-friendly platform. Whether you are a librarian or a book lover, VIL-MASYS is built to enhance your library experience by bringing all the essential functionalities online.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+[VIL-MASYS](https://librarysystem-4f4e1e02f356.herokuapp.com/)
 
-## Gitpod Reminders
+## Project Overview
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### Purpose:
 
-`python3 -m http.server`
+This project serves as an educational resource, demonstrating the application of Python development skills in building a comprehensive web-based book issuance system. The project showcases how Django can be leveraged to create a scalable and interactive application, with a focus on user experience, data management, and thorough testing.In general this project exemplifies how Python, Django, Bootstrap, and Cloudinary can be combined to build a functional, secure, and visually appealing web application.
 
-A blue button should appear to click: _Make Public_,
+### Existing Features
 
-Another blue button should appear to click: _Open Browser_.
+#### Main Menu
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+- The main menu show the options available for the user.
+- The options can be selected usin the number 1 to 4.
 
-A blue button should appear to click: _Make Public_,
+![Main Menu](docs/readme_images/main-menu.jpg)
 
-Another blue button should appear to click: _Open Browser_.
+#### Add new report
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- On this option the user will answer the questions where will be processed and transfered for a file on
+google drive.
 
-To log into the Heroku toolbelt CLI:
+![New Report](docs/readme_images/new-report.jpg)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+#### Show All Reports
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+- On this option the user can acess all the saving data on googlesheet.
 
-### Connecting your Mongo database
+![Show Reports](docs/readme_images/show-reports.jpg)
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+#### Load OEE by date
 
-------
+- On this option the user can load the OEE calculated by date.
 
-## Release History
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+![OEE by date](docs/readme_images/oee-by-date.jpg)
 
-**June 18, 2024,** Add Mongo back into template
+#### Exit
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+- This option will close the application and show the credits.
 
-**May 28 2024:** Fix Mongo and Links installs
+![Exit](docs/readme_images/exit.jpg)
 
-**April 26 2024:** Update node version to 16
+## Technical Design
 
-**September 20 2023:** Update Python version to 3.9.17.
+### Overal Equipment Effectivenss (OEE) explanation
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+- The OEE is one of the tools used for process improvement, most of time used by a 6sigma Green belt or above.
+- The idea is gather the process information and calculate the quality, availability and performance.
+- With this three factors calculate the Overall Equipment Effectiveness.
+- This data is used to understanding of your process and find oportunities to improvements.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+- The data needed to calculate the OEE are:
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+    1. Shift length in minutes - Ex. 480 minutes (8 hours)
+    2. Short and long break in minutes - Ex. 30 minutes (Lunch break)
+    3. Down time in minutes - Ex. 45 minutes (Machine Stopped work by overheating)
+    4. Ideal run rate in unit/parts per minute - Ex. 60 units (The expectation is assembly 60 box per minute)
+    5. Total parts done per shift in unit - Ex. 19000 units (Box assembled per day shifth length)
+    6. Rejected parts per shift in units - Ex. 500  (500 boxes were damaged so discarted)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+- With this information is necessary to calculate the auxiliar variables which are:
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+    1. Planned Production Time in minutes result from:
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+        **Planned production time** = Shift Length - Breaks 
+    2. Operation time in minutes result from:
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+        **Operation time** = planned production time - down time 
+    3. Good pieces in unit result from:
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+        **Good pieces** = total pieces - rejected pieces
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+- Them using the auxiliar variables together with the production data is calculate the factors:
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+    1. Availability in %:   
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+        **Availability** = (operating time/production time)*100
+    2. Performance in %:
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+        **Performance** = ((total piece/operantion time)/Ideal run rate)*100
+    3. Quality in %:
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+        **Quality** = (good pieces/total pieces)*100 
+    4. Overal Equipment Effectivenss in %:
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+        **OEE** availability * performance * quality
 
-------
 
-## FAQ about the uptime script
+### Flowchart
 
-**Why have you added this script?**
+- For the development and logic decision maker has been draw a flowchart where show all user and system interaction flow.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+![Logic Flow chart](docs/readme_images/flowchart.jpg)
 
-**How will this affect me?**
+## Technologies
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+- **Python:** Backend Development
+- **Visual Studio Code:** Local IDE.
+- **GitHub:** Source code hosting and deployment.
+- **Git:** Version control.
+- **Heroku:** Cloud Deployment.
+- **Google Cloud Services** APIs to access and manipulate cloud based files
+- **Google Drive** Store data in a googlesheet 
+- **Google Sheet** Data Storage
+- **Miro** Flowchart and design thinking
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+## Libraries
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+- **googleauth** Used to provide access to the application to interact with my google sheet.
+- **gspread** Used to access google sheets document throughout the application, to access and edit data.
+- **datetime** Used to validate datetime input
+- **os** Used to interact with the operation system
 
-**So….?**
+## Google Cloud
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+- To the data management strategy, use the Google Cloud robust APIs to store and manipulate data effeciently. Specifically, rely on two APIs provided by GoogleCloud:
+    the Google Drive API and the Google Sheets API. These APIs empower us to seamlessly interact with data stored on Google Drive and within Google Sheets programmatically.
+    To ensure the utmost privacy and security to the data, has been implemented a sophisticated approach using service accounts.
 
-**Can I opt out?**
+### Google Drive API
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+- The Google Drive API allows developers to interact with files and folders stored on Google Drive programmatically. It provides methods for uploading, downloading, searching, and modifying files, as well as managing permissions and metadata.
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+![Google Drive API](docs/readme_images/google-drive-api.jpg)
 
-**Anything more?**
+### Google Sheets API
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+- The Google Sheets API enables developers to read, write, and manipulate Google Sheets data using code. It allows for tasks such as creating new sheets, updating existing ones, inserting and deleting rows and columns, and formatting cells.
 
----
+![Google Sheet API](docs/readme_images/google-sheet-api.jpg)
 
-Happy coding!
+### Service Account
+
+- A service account is a special type of Google account that belongs to your application or a virtual machine (VM), instead of an individual user. It's typically used when the application needs to access Google Cloud services programmatically without user interaction. Service accounts are associated with cryptographic key pairs, which can be used to authenticate API requests.
+
+![Service Account](docs/readme_images/service-account.jpg)
+
+### Secure Management of Service Accounts
+
+- In the setup, security is prioritized through the management of user service accounts via JSON files. Precautions have been taken to ensure the safety of these private keys. Specifically, the JSON file containing the service account credentials is added to the .gitignore file. This step prevents accidental commits of sensitive information to version control repositories, effectively safeguarding the private keys from unauthorized access.
+
+## Testing and Fixing Bugs
+
+### Debugging 
+
+  - For debugging the python code has been used `print` together with debugging tools and the console logs to help identify bugs, loops, and condition interactions.. 
+
+  **Debugging Tools**
+
+   - [CI Python Linter - Code institute](https://pep8ci.herokuapp.com/)  
+   - [OpenAI Chat](https://chat.openai.com/)
+   - [Perplexity AI](https://www.perplexity.ai/) 
+
+
+### Aplication interaction tests
+
+After deployment, a batch of tests has been conducted, and the results are shown below.
+
+### Test Table
+
+#### Main program
+
+| **Feature**            | **Expected Results**                                              | **Testing Performed**                                       | **Result** |
+|:-----------------------:|:------------------------------------------------------------------:|:------------------------------------------------------------:|:----------:|
+| **Run Program**           | Run program without errors                                 | Run the program                           | Pass       |
+| **Main Menu**  | Accept only numbers 1 to 4                                               | Try different type of characters and different numbers.            | Pass       |
+| **1 - Add New report** | Ask user the daily report information starting from the date        | Enter option 1 using the main menu.              | Pass       |
+| **2 - Load report** | Connect to google drive, extract data and show to the user in a table       | Enter option 2 using the main menu.              | Pass       |
+| **3 - Load OEE by date** | Connect to google drive, extract data and show oee for selected date     | Enter option 3 using the main menu.              | Pass       |
+| **4 - Exit** | Close the application and show credits   | Enter option 4 using the main menu.              | Pass       |
+
+#### 1 - Add New report
+
+| **Feature**            | **Expected Results**                                              | **Testing Performed**                                       | **Result** |
+|:-----------------------:|:------------------------------------------------------------------:|:------------------------------------------------------------:|:----------:|
+| **Date** | Only accept the dd/mm/yyyy date format              | Tried different date format, character types, check return "q".                | Pass       |
+| **Name** | Only accept letters and minimum 3, not only blank characters |Tested different type of characters, empty spaces and 0-2 letters only, check return "q".                | Pass       |
+| **Shifth Length** | Only accept integer|Tested different type of characters, empty spaces, check return "q".            | Pass       |
+| **Short Breaks** | Only accept integer|Tested different type of characters, empty spaces, check return "q".         | Pass       |
+| **Meal Breaks** | Only accept integer|Tested different type of characters, empty spaces, check return "q".            | Pass       |
+| **Machine Shutdown** | Only accept integer|Tested different type of characters, empty spaces, check return "q".            | Pass       |
+| **Ideal Run Rate** | Only accept integer|Tested different type of characters, empty spaces, check return "q".           | Pass       |
+| **Total Processed Pieces** | Only accept integer|Tested different type of characters, empty spaces, check return "q".           | Pass       |
+| **Total Rejected Pieces** | Only accept integer|Tested different type of characters, empty spaces, check return "q".           | Pass       |
+| **Show User all input data with Headers** | Print a dictionary with (Header: User input)|Add all requested data and check the output data       | Pass       |
+| **Ask the user if all data is correct** |If user write **yes** start to export the data |Write yes on prompt and check the result      | Pass       |
+| **Ask the user if all data is correct** |If user write **no** restart the data colection process |Write no on prompt and check the result      | Pass       |
+
+#### 1 - Add New report - Data manipulation
+
+| **Feature**            | **Expected Results**                                              | **Testing Performed**                                       | **Result** |
+|:-----------------------:|:------------------------------------------------------------------:|:------------------------------------------------------------:|:----------:|
+| **Update Report Sheet** | Update worksheet **report** on google sheet located on google drive       | Check if the data has been exported to a new line on worksheet| Pass       |
+| **Calculate Auxiliar Variables** | Calculate auxiliar variables   | Print message with the data before export| Pass       |
+| **Update variables Sheet** | Update worksheet **variables**  on google sheet located on google drive  | Check if the data has been exported to a new line on worksheet| Pass |
+| **Calculate OEE** | Convert and Calculate OEE  | Print message with the data before export| Pass       |
+| **Update OEE Sheet** | Update worksheet **oee-factor** on google sheet located on google drive    | Check if the data has been exported to a new line on worksheet| Pass |
+| **Print Results** | Print a text showing the Overall OEE results      | Check if the printed data is correct and in the rigth format| Pass |
+
+#### 2 - Load all reports - Data manipulation
+
+| **Feature**            | **Expected Results**                                              | **Testing Performed**                                       | **Result** |
+|:-----------------------:|:------------------------------------------------------------------:|:------------------------------------------------------------:|:----------:|
+| **Print all reports** | Load worksheet **report** on google sheet located on google drive  | Select option and verify if the data is correct and proper showed| Pass       |
+
+#### 3 - Load OEE by date - Data manipulation
+
+| **Feature**            | **Expected Results**                                              | **Testing Performed**                                       | **Result** |
+|:-----------------------:|:------------------------------------------------------------------:|:------------------------------------------------------------:|:----------:|
+| **Date** | Only accept the dd/mm/yyyy date format              | Tried different date format, character types, check return "q".                   | Pass       |
+| **Date Not available** |Print no date available for dd/mm/yyyy         | Tried different which is not on googlesheet          | Pass       |
+| **Show OEE** | If the date is correct, extract data and print the OEE result for the selected date| Check if the results are correct and showing in the right format| Pass       |
+
+
+### Validator Testing
+
+#### Python
+
+- Using the [CI Python Linter - Code institute](https://pep8ci.herokuapp.com/) inspect and validate the python code, the image bellow is showing the result.
+
+#### Before validation
+
+![Python code before validation](docs/readme_images/ci-python-code.jpg)
+
+#### After validation
+
+![Python code after validation](docs/readme_images/ci-python-code-noerror.jpg)
+
+## Deployment
+
+### Github Forking
+
+- **Forking the GitHub Repository**
+  - If you want to make changes to your repository without affecting it, you can make a copy of it by 'Forking' it. This ensures your original repository remains unchanged.
+
+  1. Find the relevant GitHub repository
+  2. In the top right corner of the page, click the Fork button (under your account)
+  3. Your repository has now been 'Forked' and you have a copy to work on
+
+- **Cloning the GitHub Repository**
+  - Cloning your repository will allow you to download a local version of the repository to be worked on. Cloning can also be a great way to backup your work.
+
+  1. Find the relevant GitHub repository
+  2. Press the arrow on the Code button
+  3. Copy the link that is shown in the drop-down
+  4. Open the terminal 
+  5. Move to the folder you want clone it
+  6. In the terminal type 'git clone' & then paste the link you copied in GitHub
+  7. Press enter and your local clone will be created.
+- Live link: [GitHub Link](https://https://github.com/Volneirj/oee-calculator)
+
+### Heroku Deployment
+
+- **Creating Requirements.txt**
+    - To heroku be able to install the required dependencies is necessary to create the file where will be listed what is needed to run the project.
+
+    1. Create a file requirements.txt.
+    2. Run the command: pip3 freeze >requirements.txt.
+    3. Check if the file has been updated like the image bellow.
+
+![Requirements.txt](docs/readme_images/requirements.jpg)
+
+- **Creating an Application with Heroku**
+    - To be able to  deploy and run the application on heroku plataform, is necessary follow a few steps:
+
+    1. Login or create an account on Heroku website.
+    2. Click on create a new app.
+
+![New app](docs/readme_images/create-new-app.jpg)
+
+3. After create the new app, you need to configure the settings.
+4. The first setting which need to be done is add your CREDS.json info to the plataform so it will be able to access the googlecloud service account.
+
+![Settings CREDS](docs/readme_images/creds.jpg)
+
+5. Add the Buildpacks necessary to run the application, in this case python and nodejs in this sequence.
+
+![Buildpacks](docs/readme_images/buildpacks.jpg)
+
+6. After done the settings we move to the deploy tab where we will configure the deployment setup.
+7. Connect your Github.
+8. Select your repository on github.
+9. Connect to the repository.
+
+![Github](docs/readme_images/github.jpg)
+
+10. After all setting above been done you can select to deploy automatic or manual.
+
+![Deploy](docs/readme_images/deploy.jpg)
+
+11. After press to deploy your project if all settings are working you should see it building the application.
+
+![Project being Deployed](docs/readme_images/deployed.jpg)
+
+12. After all steps of deployment will show a button View, where you can click to open a new tab with the application.
+
+![Deploy done](docs/readme_images/done.jpg)
+
+
+## Credits
+
+**Base Code reference** 
+
+   - [Code institute Love Sandwiches Walkthrough](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LS101+2021_T1/courseware/293ee9d8ff3542d3b877137ed81b9a5b/58d3e90f9a2043908c62f31e51c15deb/)
