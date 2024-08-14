@@ -17,138 +17,215 @@ This project serves as an educational resource, demonstrating the application of
 
 - The Navigation bar is customized for the three type of logins: Administrator, Registred user and no registered users.
 
-<details><summary>Administrator Navbar</summary><img src="static/media/readme_images/features/menu-adm.jpg"></details>
-<details><summary>Administrator Navbar</summary><img src="static/media/readme_images/features/menu-normal-user.jpg"></details>
-<details><summary>Administrator Navbar</summary><img src="static/media/readme_images/features/menu-no-user.jpg"></details>
+    <details><summary>Administrator Navbar</summary><img src="static/media/readme_images/features/menu-adm.jpg"></details>
+    <details><summary>Administrator Navbar</summary><img src="static/media/readme_images/features/menu-normal-user.jpg"></details>
+    <details><summary>Administrator Navbar</summary><img src="static/media/readme_images/features/menu-no-user.jpg"></details>
 
 
-#### Top 3 Books
+#### Main Page - Top 3 Books
 
 - The "3 Most Issued Books" section enhances user engagement by showcasing popular titles and guiding users toward trending books, while also promoting the circulation of these frequently borrowed items.
 
-<details><summary>Administrator Navbar</summary><img src="static/media/readme_images/features/top-issued-books.jpg"></details>
+    <details><summary>Top 5 Issued Books</summary><img src="static/media/readme_images/features/top-issued-books.jpg"></details>
 
-#### Website Introduction Features
+#### Main Page - Website Introduction Features
 
 - Why issue with us section brings the benefits of use the booking system in this online plataform. 
 - How to issue a book, shows the new user how simple is to issue a book in our plataform.
 - The button to join the library after the features explained is to encourage the user to join the website.
 
-<details><summary>Administrator Navbar</summary><img src="static/media/readme_images/features/features.jpg"></details>
-
-![Show Reports](docs/readme_images/show-reports.jpg)
-
-#### Load OEE by date
-
-- On this option the user can load the OEE calculated by date.
+    <details><summary>Main Page Features Introduction</summary><img src="static/media/readme_images/features/features.jpg"></details>
 
 
-![OEE by date](docs/readme_images/oee-by-date.jpg)
+#### About Page
 
-#### Exit
+- The About page provides an overview of VIL-MASYS, our Virtual Library Management System, highlighting its purpose and key features.
 
-- This option will close the application and show the credits.
+    <details><summary>About Page</summary><img src="static/media/readme_images/features/about.jpg"></details>
 
-![Exit](docs/readme_images/exit.jpg)
+#### Sign up/Login page
+
+- Simple quick signup.
+    <details><summary>Signup</summary><img src="static/media/readme_images/features/signup.jpg"></details>
+
+- Login Page has a button to signup page in case the person has not user yet.
+    <details><summary>Login</summary><img src="static/media/readme_images/features/login.jpg"></details>
+
+#### Book Suggestions Forms
+
+- Open Suggestion book page, in case anyone want to suggest new books. 
+    <details><summary>Book Suggestion Form</summary><img src="static/media/readme_images/features/suggest-book.jpg"></details>
+
+- Thank you page.
+    <details><summary>Thank you Page</summary><img src="static/media/readme_images/features/suggest-book-thanks.jpg"></details>
+
+- Easy and clean admin interface to see the book suggestions.
+    <details><summary>Login</summary><img src="static/media/readme_images/features/suggest-book-adm.jpg"></details>
+
+#### Book Issuance system
+
+- Easy issuance when clicked in a book cover, you will be directed for book details where if logged will show the option to book it other wise will show the login button.
+    <details><summary>Book Detail No user</summary><img src="static/media/readme_images/features/book-detail-nouser.jpg"></details>
+    <details><summary>Book Detail user conected</summary><img src="static/media/readme_images/features/book-detail-user.jpg"></details>
+
+- Confirmation screen showing the details of your issuance.
+    <details><summary>Issuance Details</summary><img src="static/media/readme_images/features/issue-book-screen.jpg"></details>
+
+- You can see your history and return the books on My issued Books Link on Navigation bar.
+    <details><summary>My Issued Books</summary><img src="static/media/readme_images/features/issued-book-history.jpg"></details>
+
+- When returned a book as good practice it has a confirmation. 
+    <details><summary>Return Book Confirmation</summary><img src="static/media/readme_images/features/returning-book-confirmation.jpg"></details>
+    <details><summary>Book Return Notification</summary><img src="static/media/readme_images/features/book-return-notify.jpg"></details>    
+
+
+#### Book Collection
+
+- The book collection has a search bar to search a title and shows the book cover and book name to easy visualization.
+    <details><summary>Book Collection</summary><img src="static/media/readme_images/features/bookcolection.jpg"></details>
+
+- When logged in with admin, shows the option on the top to add new books.
+    <details><summary>Admin book collection interface</summary><img src="static/media/readme_images/features/add-book.jpg"></details>
+
+#### Administrator CRUD Fucntion
+
+- As web administrator is possible to add, update or delete books.
+    - Adding a book:
+        1. On book Collection page as Administrator will show a button Add book.
+            <details><summary>Add a book</summary><img src="static/media/readme_images/features/add-book.jpg"></details>
+        2. The link will bring you to a page where you can fill the form to add a book.
+            <details><summary>Add a book form</summary><img src="static/media/readme_images/features/add-book-2.jpg"></details>
+        3.  If not loaded a book cover, it automaticaly will add a placeholder image saying book image not available.
+            <details><summary>Book Image not Available</summary><img src="static/media/readme_images/features/book-image-notavailable.jpg"></details>
+- As web administrator when on book details will be visible the buttons to update and delete the book.
+        <details><summary>CRUD options</summary><img src="static/media/readme_images/features/CRUD-edit-delete.jpg"></details>
+    - Updating a book:
+        1. Click on edit book.
+        2. Will open the Update book page where you can change all book information.
+            <details><summary>Update Book</summary><img src="static/media/readme_images/features/CRUD-edit.jpg"></details>
+    - Deleting a book:
+        1. Click on Delete book.
+        2. You Will be directed to a deletion page confirmation.
+            <details><summary>Delete Book</summary><img src="static/media/readme_images/features/CRUD-delete.jpg"></details>
+
+#### Footer with social media.   
+
+- Footer has the social media links opening in a new page.
+        <details><summary>Footer</summary><img src="static/media/readme_images/features/footer.jpg"></details>
+
+#### Extra Functions
+
+- Late fee function, if the book is not returned in 14 days, will have a 1$ for every day delay.
+    <details><summary>Late Fee</summary><img src="static/media/readme_images/features/late-fee.jpg"></details>
+- You cannot issue 2 same title at once.
+    <details><summary>Book already issued notification </summary><img src="static/media/readme_images/features/notification-book-already-issued.jpg"></details>
+- You only can issue 3 books at once.
+    <details><summary>Max issue notfication</summary><img src="static/media/readme_images/features/max-issue.jpg"></details>
+- Book out of stock.
+    <details><summary>Book out of stock notfication</summary><img src="static/media/readme_images/features/out-of-stock.jpg"></details>
 
 ## Technical Design
 
-### Overal Equipment Effectivenss (OEE) explanation
+### WireFrames
 
-- The OEE is one of the tools used for process improvement, most of time used by a 6sigma Green belt or above.
-- The idea is gather the process information and calculate the quality, availability and performance.
-- With this three factors calculate the Overall Equipment Effectiveness.
-- This data is used to understanding of your process and find oportunities to improvements.
+- When the VIL-MASYS project began, I created basic wireframes to outline the initial design and functionality of the application. These wireframes served as a starting point to visualize the core structure and user flow. However, as development progressed, significant changes were made to improve the user experience, functionality, and overall design.
 
-- The data needed to calculate the OEE are:
+- Initial WireFrame Design:
+    <details><summary>Home</summary><img src="static/media/readme_images/wireframes/home.jpg"></details>
+    <details><summary>Book Info</summary><img src="static/media/readme_images/wireframes/book-info.jpg"></details>
+    <details><summary>Login</summary><img src="static/media/readme_images/wireframes/login.jpg"></details>
+    <details><summary>Issued Book</summary><img src="static/media/readme_images/wireframes/issue-book-page.jpg"></details>
+    <details><summary>About</summary><img src="static/media/readme_images/wireframes/about.jpg"></details>
 
-    1. Shift length in minutes - Ex. 480 minutes (8 hours)
-    2. Short and long break in minutes - Ex. 30 minutes (Lunch break)
-    3. Down time in minutes - Ex. 45 minutes (Machine Stopped work by overheating)
-    4. Ideal run rate in unit/parts per minute - Ex. 60 units (The expectation is assembly 60 box per minute)
-    5. Total parts done per shift in unit - Ex. 19000 units (Box assembled per day shifth length)
-    6. Rejected parts per shift in units - Ex. 500  (500 boxes were damaged so discarted)
+- Key Changes:
+    - Enhanced User Interface: The initial wireframes were simple and lacked the visual appeal needed for a modern web application. As the project evolved, I introduced a more polished and intuitive interface, incorporating feedback and best practices in UI/UX design.
 
-- With this information is necessary to calculate the auxiliar variables which are:
+    - Expanded Features: Originally, the wireframes focused on basic functionalities. During development, new features were added, such as personalized book recommendations, late fee, notifications and advanced search capabilities, which were not part of the initial plan.
 
-    1. Planned Production Time in minutes result from:
+    - Improved Navigation and Layout: The initial wireframes had a straightforward but somewhat limited navigation structure. I restructured the layout to provide a more seamless and logical flow, making it easier for users to navigate between different sections of the application.
 
-        **Planned production time** = Shift Length - Breaks 
-    2. Operation time in minutes result from:
+### Models Relationships
 
-        **Operation time** = planned production time - down time 
-    3. Good pieces in unit result from:
+- Key Relationships:
+    1. Book and IssuedBook Relationship
+    - Relationship Type: One-to-Many (ForeignKey)
+        Explanation:
+        - The Book model represents each book in the library's collection.
+        - The IssuedBook model keeps track of each instance where a book is issued to a user.
+        - A single Book can be issued multiple times, hence the one-to-many relationship. This is implemented using a ForeignKey in the IssuedBook model that references the Book model.
+        - The related_name='issued_books' allows you to access all issued records for a particular book using book.issued_books.all().
+    2. User and IssuedBook Relationship
+    - Relationship Type: One-to-Many (ForeignKey)
+        Explanation:
+        - The User model (from Django’s built-in authentication system) represents the users of the library system.
+        - Each user can issue multiple books over time. Therefore, there is a one-to-many relationship between User and IssuedBook.
+        - The ForeignKey in the IssuedBook model links each issued book to the specific user who has borrowed it.
+        - The related_name='issued_books' allows you to retrieve all the books issued by a particular user using user.issued_books.all().
+    3. BookSuggestion Model
+    - Standalone Entity:
+        - The BookSuggestion model is independent of the Book and IssuedBook models. It captures suggestions for new books that users want to see in the library.
+        - This model contains information about the suggested book's title and author, as well as optional fields for the user’s name, email, and reason for suggesting the book.
+        - While this model is not directly related to the Book or User models through foreign keys, it plays an important role in allowing users to contribute to the library’s growth.
 
-        **Good pieces** = total pieces - rejected pieces
-
-- Them using the auxiliar variables together with the production data is calculate the factors:
-
-    1. Availability in %:   
-
-        **Availability** = (operating time/production time)*100
-    2. Performance in %:
-
-        **Performance** = ((total piece/operantion time)/Ideal run rate)*100
-    3. Quality in %:
-
-        **Quality** = (good pieces/total pieces)*100 
-    4. Overal Equipment Effectivenss in %:
-
-        **OEE** availability * performance * quality
-
-
-### Flowchart
-
-- For the development and logic decision maker has been draw a flowchart where show all user and system interaction flow.
-
-![Logic Flow chart](docs/readme_images/flowchart.jpg)
+    <details><summary>Relations</summary><img src="static/media/readme_images/relation.jpg"></details>
 
 ## Technologies
 
-- **Python:** Backend Development
+### Backend and Frameworks:
+
+- **Python:** Core programming language used for the project.
+- **Django:** Web framework for building the application's backend, handling models, views, and forms.
+- **Django ORM:** For database interactions and queries.
+
+### Frontend:
+
+- **HTML/CSS:** For structuring and styling the web pages.
+- **Bootstrap:** CSS framework for responsive design and UI components like the navbar and forms.
+
+### Database:
+
+- **SQLite:** Default database used by Django for development/tests.
+- **PostgreSQL**:  Database for production.
+
+### Storage:
+
+-  **Cloudinary:** For managing and storing media files such as images.
+
+### User Authentication:
+- **Django's Authentication System:** For handling user registration, login, and permissions.
+
+
+### Testing:
+- **Django Test Framework:** For unit and integration testing of models, views, and forms.
+- **Unittest:** Python's standard library for writing and running tests.
+
 - **Visual Studio Code:** Local IDE.
-- **GitHub:** Source code hosting and deployment.
-- **Git:** Version control.
+
+### Tools and Utilities:
+- **Git:** Version control system for tracking changes and collaborating.
+- **GitHub:**  Platform for hosting the project repository.
+
+### Deployment:
 - **Heroku:** Cloud Deployment.
-- **Google Cloud Services** APIs to access and manipulate cloud based files
-- **Google Drive** Store data in a googlesheet 
-- **Google Sheet** Data Storage
-- **Miro** Flowchart and design thinking
 
-## Libraries
+### Others:
+- **Timezone and Date/Time Handling:** Managing timezones and datetime objects for accurate timestamps.
 
-- **googleauth** Used to provide access to the application to interact with my google sheet.
-- **gspread** Used to access google sheets document throughout the application, to access and edit data.
-- **datetime** Used to validate datetime input
-- **os** Used to interact with the operation system
+## Main used Libraries
 
-## Google Cloud
-
-- To the data management strategy, use the Google Cloud robust APIs to store and manipulate data effeciently. Specifically, rely on two APIs provided by GoogleCloud:
-    the Google Drive API and the Google Sheets API. These APIs empower us to seamlessly interact with data stored on Google Drive and within Google Sheets programmatically.
-    To ensure the utmost privacy and security to the data, has been implemented a sophisticated approach using service accounts.
-
-### Google Drive API
-
-- The Google Drive API allows developers to interact with files and folders stored on Google Drive programmatically. It provides methods for uploading, downloading, searching, and modifying files, as well as managing permissions and metadata.
-
-![Google Drive API](docs/readme_images/google-drive-api.jpg)
-
-### Google Sheets API
-
-- The Google Sheets API enables developers to read, write, and manipulate Google Sheets data using code. It allows for tasks such as creating new sheets, updating existing ones, inserting and deleting rows and columns, and formatting cells.
-
-![Google Sheet API](docs/readme_images/google-sheet-api.jpg)
-
-### Service Account
-
-- A service account is a special type of Google account that belongs to your application or a virtual machine (VM), instead of an individual user. It's typically used when the application needs to access Google Cloud services programmatically without user interaction. Service accounts are associated with cryptographic key pairs, which can be used to authenticate API requests.
-
-![Service Account](docs/readme_images/service-account.jpg)
-
-### Secure Management of Service Accounts
-
-- In the setup, security is prioritized through the management of user service accounts via JSON files. Precautions have been taken to ensure the safety of these private keys. Specifically, the JSON file containing the service account credentials is added to the .gitignore file. This step prevents accidental commits of sensitive information to version control repositories, effectively safeguarding the private keys from unauthorized access.
+- **Django:** The main web framework used to build your application.
+- **Django Rest Framework (DRF)**: for building APIs.
+- **Bootstrap:** For frontend styling and responsive design.
+- **Pillow:** For image handling in Django.
+- **Cloudinary:** For storing and serving media files (images) in the cloud.
+- **Unittest:** For writing and running tests in  Django application.
+- **Django Messages Framework:** For displaying flash messages to users.
+- **Django Paginator:** For handling pagination in your views.
+- **PostgreSQL:** As the database backend..
+- **Django Crispy Forms:** To make Django forms more elegant and manageable.
+- **Gunicorn:** As a Python WSGI HTTP Server for serving your application.
+- **Whitenoise:** For serving static files in production.
+- **Django Storage:** For managing storage in cloud environments.
 
 ## Testing and Fixing Bugs
 
@@ -163,79 +240,10 @@ This project serves as an educational resource, demonstrating the application of
    - [Perplexity AI](https://www.perplexity.ai/) 
 
 
-### Aplication interaction tests
+## Testing 
 
-After deployment, a batch of tests has been conducted, and the results are shown below.
-
-### Test Table
-
-#### Main program
-
-| **Feature**            | **Expected Results**                                              | **Testing Performed**                                       | **Result** |
-|:-----------------------:|:------------------------------------------------------------------:|:------------------------------------------------------------:|:----------:|
-| **Run Program**           | Run program without errors                                 | Run the program                           | Pass       |
-| **Main Menu**  | Accept only numbers 1 to 4                                               | Try different type of characters and different numbers.            | Pass       |
-| **1 - Add New report** | Ask user the daily report information starting from the date        | Enter option 1 using the main menu.              | Pass       |
-| **2 - Load report** | Connect to google drive, extract data and show to the user in a table       | Enter option 2 using the main menu.              | Pass       |
-| **3 - Load OEE by date** | Connect to google drive, extract data and show oee for selected date     | Enter option 3 using the main menu.              | Pass       |
-| **4 - Exit** | Close the application and show credits   | Enter option 4 using the main menu.              | Pass       |
-
-#### 1 - Add New report
-
-| **Feature**            | **Expected Results**                                              | **Testing Performed**                                       | **Result** |
-|:-----------------------:|:------------------------------------------------------------------:|:------------------------------------------------------------:|:----------:|
-| **Date** | Only accept the dd/mm/yyyy date format              | Tried different date format, character types, check return "q".                | Pass       |
-| **Name** | Only accept letters and minimum 3, not only blank characters |Tested different type of characters, empty spaces and 0-2 letters only, check return "q".                | Pass       |
-| **Shifth Length** | Only accept integer|Tested different type of characters, empty spaces, check return "q".            | Pass       |
-| **Short Breaks** | Only accept integer|Tested different type of characters, empty spaces, check return "q".         | Pass       |
-| **Meal Breaks** | Only accept integer|Tested different type of characters, empty spaces, check return "q".            | Pass       |
-| **Machine Shutdown** | Only accept integer|Tested different type of characters, empty spaces, check return "q".            | Pass       |
-| **Ideal Run Rate** | Only accept integer|Tested different type of characters, empty spaces, check return "q".           | Pass       |
-| **Total Processed Pieces** | Only accept integer|Tested different type of characters, empty spaces, check return "q".           | Pass       |
-| **Total Rejected Pieces** | Only accept integer|Tested different type of characters, empty spaces, check return "q".           | Pass       |
-| **Show User all input data with Headers** | Print a dictionary with (Header: User input)|Add all requested data and check the output data       | Pass       |
-| **Ask the user if all data is correct** |If user write **yes** start to export the data |Write yes on prompt and check the result      | Pass       |
-| **Ask the user if all data is correct** |If user write **no** restart the data colection process |Write no on prompt and check the result      | Pass       |
-
-#### 1 - Add New report - Data manipulation
-
-| **Feature**            | **Expected Results**                                              | **Testing Performed**                                       | **Result** |
-|:-----------------------:|:------------------------------------------------------------------:|:------------------------------------------------------------:|:----------:|
-| **Update Report Sheet** | Update worksheet **report** on google sheet located on google drive       | Check if the data has been exported to a new line on worksheet| Pass       |
-| **Calculate Auxiliar Variables** | Calculate auxiliar variables   | Print message with the data before export| Pass       |
-| **Update variables Sheet** | Update worksheet **variables**  on google sheet located on google drive  | Check if the data has been exported to a new line on worksheet| Pass |
-| **Calculate OEE** | Convert and Calculate OEE  | Print message with the data before export| Pass       |
-| **Update OEE Sheet** | Update worksheet **oee-factor** on google sheet located on google drive    | Check if the data has been exported to a new line on worksheet| Pass |
-| **Print Results** | Print a text showing the Overall OEE results      | Check if the printed data is correct and in the rigth format| Pass |
-
-#### 2 - Load all reports - Data manipulation
-
-| **Feature**            | **Expected Results**                                              | **Testing Performed**                                       | **Result** |
-|:-----------------------:|:------------------------------------------------------------------:|:------------------------------------------------------------:|:----------:|
-| **Print all reports** | Load worksheet **report** on google sheet located on google drive  | Select option and verify if the data is correct and proper showed| Pass       |
-
-#### 3 - Load OEE by date - Data manipulation
-
-| **Feature**            | **Expected Results**                                              | **Testing Performed**                                       | **Result** |
-|:-----------------------:|:------------------------------------------------------------------:|:------------------------------------------------------------:|:----------:|
-| **Date** | Only accept the dd/mm/yyyy date format              | Tried different date format, character types, check return "q".                   | Pass       |
-| **Date Not available** |Print no date available for dd/mm/yyyy         | Tried different which is not on googlesheet          | Pass       |
-| **Show OEE** | If the date is correct, extract data and print the OEE result for the selected date| Check if the results are correct and showing in the right format| Pass       |
-
-
-### Validator Testing
-
-#### Python
-
-- Using the [CI Python Linter - Code institute](https://pep8ci.herokuapp.com/) inspect and validate the python code, the image bellow is showing the result.
-
-#### Before validation
-
-![Python code before validation](docs/readme_images/ci-python-code.jpg)
-
-#### After validation
-
-![Python code after validation](docs/readme_images/ci-python-code-noerror.jpg)
+- The page of tests can be found in the link bellow.
+    [Project Test documentation](TESTING.md) 
 
 ## Deployment
 
@@ -258,7 +266,7 @@ After deployment, a batch of tests has been conducted, and the results are shown
   5. Move to the folder you want clone it
   6. In the terminal type 'git clone' & then paste the link you copied in GitHub
   7. Press enter and your local clone will be created.
-- Live link: [GitHub Link](https://https://github.com/Volneirj/oee-calculator)
+- Live link: [GitHub Link](https://github.com/Volneirj/project_iv_ci)
 
 ### Heroku Deployment
 
@@ -310,6 +318,3 @@ After deployment, a batch of tests has been conducted, and the results are shown
 
 ## Credits
 
-**Base Code reference** 
-
-   - [Code institute Love Sandwiches Walkthrough](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LS101+2021_T1/courseware/293ee9d8ff3542d3b877137ed81b9a5b/58d3e90f9a2043908c62f31e51c15deb/)

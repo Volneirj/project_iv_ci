@@ -245,11 +245,12 @@
     font-weight: 700;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
+    max-width: 430px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin: 0 auto;
 }
 
 .signup-container h2 {
@@ -258,10 +259,13 @@
 }
 
 .signup-container form {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .signup-container form input[type="text"],
@@ -272,6 +276,9 @@
     margin-bottom: 1rem;
     border: 1px solid #ccc;
     border-radius: 4px;
+    flex: 1;
+    padding: 5px;
+    margin: 0 auto;
 }
 
 .signup-container form button {
@@ -283,6 +290,7 @@
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    padding: 5px 10px;
 }
 
 .signup-container form button:hover {
@@ -294,27 +302,6 @@
 }
 
 /* Centering the search form and styling */
-.signup-container {
-    width: 60%;
-    margin: 0 auto;
-}
-
-.signup-container form {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-.signup-container form input {
-    flex: 1;
-    margin-right: 10px;
-    padding: 5px;
-}
-
-.signup-container form button {
-    padding: 5px 10px;
-}
-
 /* Book list */
 .card a {
     text-decoration: none;
