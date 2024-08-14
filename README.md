@@ -209,6 +209,7 @@ This project serves as an educational resource, demonstrating the application of
 
 ### Others:
 - **Timezone and Date/Time Handling:** Managing timezones and datetime objects for accurate timestamps.
+- **Coverage:** Generate automated test reports.
 
 ## Main used Libraries
 
@@ -287,7 +288,7 @@ This project serves as an educational resource, demonstrating the application of
 ![New app](static/media/readme_images/general_info/create-new-app.jpg)
 
 3. After create the new app, you need to configure the settings.
-4. The first setting which need to be done is add your CREDS.json info to the plataform so it will be able to access the googlecloud service account.
+4. The first setting which need to be done is add your enviroment info to the plataform so it will be able to access outside sources.
 
 ![Settings CREDS](static/media/readme_images/general_info/creds.jpg)
 
