@@ -1,9 +1,12 @@
-# VIL-MASYS - Virtual Library Management System
+# VIL-MASYS 
+## Virtual Library Management System
 
 Welcome to VIL-MASYS, the Virtual Library Management System designed to streamline the management of libraries by providing a robust, user-friendly platform. Whether you are a librarian or a book lover, VIL-MASYS is built to enhance your library experience by bringing all the essential functionalities online.
 
+![Requirements.txt](static/media/readme_images/features/responsive.jpg)
 
-[VIL-MASYS](https://librarysystem-4f4e1e02f356.herokuapp.com/)
+[VIL-MASYS - Virtual Library Management System](https://librarysystem-4f4e1e02f356.herokuapp.com/)
+
 
 ## Project Overview
 
@@ -273,7 +276,7 @@ This project serves as an educational resource, demonstrating the application of
     2. Run the command: pip3 freeze >requirements.txt.
     3. Check if the file has been updated like the image bellow.
 
-![Requirements.txt](docs/readme_images/requirements.jpg)
+![Requirements.txt](static/media/readme_images/general_info/requirements.jpg)
 
 - **Creating an Application with Heroku**
     - To be able to  deploy and run the application on heroku plataform, is necessary follow a few steps:
@@ -281,35 +284,35 @@ This project serves as an educational resource, demonstrating the application of
     1. Login or create an account on Heroku website.
     2. Click on create a new app.
 
-![New app](docs/readme_images/create-new-app.jpg)
+![New app](static/media/readme_images/general_info/create-new-app.jpg)
 
 3. After create the new app, you need to configure the settings.
 4. The first setting which need to be done is add your CREDS.json info to the plataform so it will be able to access the googlecloud service account.
 
-![Settings CREDS](docs/readme_images/creds.jpg)
+![Settings CREDS](static/media/readme_images/general_info/creds.jpg)
 
 5. Add the Buildpacks necessary to run the application, in this case python and nodejs in this sequence.
 
-![Buildpacks](docs/readme_images/buildpacks.jpg)
+![Buildpacks](static/media/readme_images/general_info/buildpacks.jpg)
 
 6. After done the settings we move to the deploy tab where we will configure the deployment setup.
 7. Connect your Github.
 8. Select your repository on github.
 9. Connect to the repository.
 
-![Github](docs/readme_images/github.jpg)
+![Github](static/media/readme_images/general_info/github.jpg)
 
 10. After all setting above been done you can select to deploy automatic or manual.
 
-![Deploy](docs/readme_images/deploy.jpg)
+![Deploy](static/media/readme_images/general_info/deploy.jpg)
 
 11. After press to deploy your project if all settings are working you should see it building the application.
 
-![Project being Deployed](docs/readme_images/deployed.jpg)
+![Project being Deployed](static/media/readme_images/general_info/deployed.jpg)
 
 12. After all steps of deployment will show a button View, where you can click to open a new tab with the application.
 
-![Deploy done](docs/readme_images/done.jpg)
+![Deploy done](static/media/readme_images/general_info/done.jpg)
 
 
 ## Credits
