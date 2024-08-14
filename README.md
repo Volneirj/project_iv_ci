@@ -127,7 +127,6 @@ This project serves as an educational resource, demonstrating the application of
 - When the VIL-MASYS project began, I created basic wireframes to outline the initial design and functionality of the application. These wireframes served as a starting point to visualize the core structure and user flow. However, as development progressed, significant changes were made to improve the user experience, functionality, and overall design.
 
 - Initial WireFrame Design:
-
         <details><summary>Home</summary><img src="static/media/readme_images/wireframes/home.jpg"></details>
         <details><summary>Book Info</summary><img src="static/media/readme_images/wireframes/book-info.jpg"></details>
         <details><summary>Login</summary><img src="static/media/readme_images/wireframes/login.jpg"></details>
@@ -145,24 +144,24 @@ This project serves as an educational resource, demonstrating the application of
 
 - Key Relationships:
     1. Book and IssuedBook Relationship
-    - Relationship Type: One-to-Many (ForeignKey)
-        Explanation:
-        - The Book model represents each book in the library's collection.
-        - The IssuedBook model keeps track of each instance where a book is issued to a user.
-        - A single Book can be issued multiple times, hence the one-to-many relationship. This is implemented using a ForeignKey in the IssuedBook model that references the Book model.
-        - The related_name='issued_books' allows you to access all issued records for a particular book using book.issued_books.all().
+        - Relationship Type: One-to-Many (ForeignKey)
+            Explanation:
+            - The Book model represents each book in the library's collection.
+            - The IssuedBook model keeps track of each instance where a book is issued to a user.
+            - A single Book can be issued multiple times, hence the one-to-many relationship. This is implemented using a ForeignKey in the IssuedBook model that references the Book model.
+            - The related_name='issued_books' allows you to access all issued records for a particular book using book.issued_books.all().
     2. User and IssuedBook Relationship
-    - Relationship Type: One-to-Many (ForeignKey)
-        Explanation:
-        - The User model (from Django’s built-in authentication system) represents the users of the library system.
-        - Each user can issue multiple books over time. Therefore, there is a one-to-many relationship between User and IssuedBook.
-        - The ForeignKey in the IssuedBook model links each issued book to the specific user who has borrowed it.
-        - The related_name='issued_books' allows you to retrieve all the books issued by a particular user using user.issued_books.all().
+        - Relationship Type: One-to-Many (ForeignKey)
+            Explanation:
+            - The User model (from Django’s built-in authentication system) represents the users of the library system.
+            - Each user can issue multiple books over time. Therefore, there is a one-to-many relationship between User and IssuedBook.
+            - The ForeignKey in the IssuedBook model links each issued book to the specific user who has borrowed it.
+            - The related_name='issued_books' allows you to retrieve all the books issued by a particular user using user.issued_books.all().
     3. BookSuggestion Model
     - Standalone Entity:
-        - The BookSuggestion model is independent of the Book and IssuedBook models. It captures suggestions for new books that users want to see in the library.
-        - This model contains information about the suggested book's title and author, as well as optional fields for the user’s name, email, and reason for suggesting the book.
-        - While this model is not directly related to the Book or User models through foreign keys, it plays an important role in allowing users to contribute to the library’s growth.
+            - The BookSuggestion model is independent of the Book and IssuedBook models. It captures suggestions for new books that users want to see in the library.
+            - This model contains information about the suggested book's title and author, as well as optional fields for the user’s name, email, and reason for suggesting the book.
+            - While this model is not directly related to the Book or User models through foreign keys, it plays an important role in allowing users to contribute to the library’s growth.
 
     <details><summary>Relations</summary><img src="static/media/readme_images/relation.jpg"></details>
 
