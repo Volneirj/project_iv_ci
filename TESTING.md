@@ -3,20 +3,54 @@
 - [Code Validation](#code-validation)
   - [HTML](#html)
   - [CSS](#css)
-  - [JavaScript](#javascript)
   - [Python](#python)
 - [Responsiveness and Device Testing](#responsiveness-and-device-testing)
 - [Browser Testing](#browser-testing)
-- [Lighthouse Testing](#lighthouse-testing)
-- [Automated Testing](#automated-testing)
-- [Manual Testing](#manual-testing)
+- [Manual and Automating Testing](#manual-and-automating-testing) 
+  - [Automated Testing](#automated-testing)
+  - [Manual Testing](#manual-testing)
+
+### HTML
+
+All HTML pages were validated using the [W3C HTML Validator](https://validator.w3.org/), and no errors were detected.
+| Page                                                                                                                                     | Result              |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| <details><summary>Home</summary><img src="static/media/readme_images/testing/html-check-home.jpg"></details>                      | <mark>PASS</mark>   |
+| <details><summary>Book Collection</summary><img src="static/media/readme_images/testing/html-check-books.jpg"></details>                | <mark>PASS</mark>   |
+| <details><summary>Book Detail</summary><img src="static/media/readme_images/testing/html-check-books-detail.jpg"></details>      | <mark>PASS</mark>   |
+| <details><summary>Suggestion form</summary><img src="static/media/readme_images/testing/html-check-books-sugestion-form,jpg"></details>            | <mark>PASS</mark>   |
+| <details><summary>My issued List</summary><img src="static/media/readme_images/testing/html-check-issues-list.jpg"></details>          | <mark>PASS</mark>   |
+| <details><summary>View Suggestions</summary><img src="static/media/readme_images/testing/html-check-view-suggestions"></details>          | <mark>PASS</mark>   |
+| <details><summary>Signup</summary><img src="static/media/readme_images/testing/html-check-signup.jpg"></details>        | <mark>PASS</mark>   |
+| <details><summary>Login</summary><img src="static/media/readme_images/testing/html-check-login.jpg"></details>      | <mark>PASS</mark>   |
+| <details><summary>About</summary><img src="static/media/readme_images/testing/html-check-about.jpg"></details>  | <mark>PASS</mark>   |
+| <details><summary>Confirm Book Return</summary><img src="static/media/readme_images/testing/html-check-creturn.jpg"></details>      | <mark>PASS</mark>   |
+
+### CSS
+
+- Using the [Markup Validation Service](https://validator.w3.org), through the direct input option the CSS code has been checked looking for errors.
+
+![screenshot](static/media/readme_images/testing/css-validation.jpg)  
+
+### Python
+- Using the [CI Python Linter - Code institute](https://pep8ci.herokuapp.com/) inspect and validate the python code. All .py files have been checked and most issues found were missing or extra white lines and long lines. All Issues have been fixed.
+
+## Responsiveness and Device Testing
+
+Throughout the development process, the website was rigorously tested across a range of devices, including desktops, laptops, smartphones, and tablets. This testing ensured that the website displayed correctly on screens of various sizes and orientations, both portrait and landscape. Additionally, the responsive design was validated using Google Chrome's developer tools to confirm that the layout remained structurally sound and adaptable across different screen dimensions. No issues were noted, affirming that the site functions as expected across diverse environments.
+
+## Browser Testing
+
+The website was tested across Google Chrome, Safari, and Microsoft Edge, and no issues were found.
+
+## Manual and Automating Testing
+
+To ensure thorough testing, organization, and control throughout the development process, all testing activities were meticulously aligned with the requirements and acceptance criteria outlined in the epic and related user stories. This structured approach allowed us to systematically cover every aspect of the application, ensuring comprehensive test coverage and alignment with project goals.
+
+[Epic - Comprehensive Testing for Library Management System](https://github.com/Volneirj/project_iv_ci/issues/36)
 
 
-## Lighthouse Testing
-
-Lighthouse validation was run on all pages (both mobile and desktop) in order to check performance, accessibility, best practices and CEO.
-
-## Automated Testing
+### Automated Testing
 
 To achieve a robust and reliable application, a comprehensive testing strategy was implemented, combining both manual and automated methods. Leveraging Django's built-in testing framework, automated tests were meticulously developed to cover critical functionalities, including views and forms.
 
@@ -28,7 +62,7 @@ To run the tests, I executed the following command in the terminal:
 
 Total Count of Automated Tests: 41
 
-![screenshot](static/images/readme_images/testing/screen-terminal.jpg)  
+![screenshot](static/media/readme_images/testing//screen-terminal.jpg)  
 
 To create the coverage report, I run the following commands:
 
@@ -37,3 +71,23 @@ To create the coverage report, I run the following commands:
 `coverage report`
 
 Below are the reports on automated tests.
+
+| App                                   | Screenshot                                   | 
+| ------------------------------------- | -------------------------------------------- | 
+| Home  | ![screenshot](static/media/readme_images/testing//report-home.jpg)   |
+| Books  | ![screenshot](static/media/readme_images/testing//report-books.jpg)   |
+| Issues  | ![screenshot](static/media/readme_images/testing//report-issues.jpg)   |
+| Users  | ![screenshot](static/media/readme_images/testing//report-users.jpg)   |
+| About  | ![screenshot](static/media/readme_images/testing//report-about.jpg)   |
+
+
+### Manual Testing
+
+A comprehensive manual testing process was conducted to address areas that automated tests could not cover. Every test has been documented in the user stories below, where they are meticulously organized by application and test type to ensure complete coverage and clarity.
+
+[User Story 23 - Tests About Page ](https://github.com/Volneirj/project_iv_ci/issues/23)
+[User Story 27 - Comprehensive Manual Testing of Book Management Features ](https://github.com/Volneirj/project_iv_ci/issues/27)
+[User Story 28 - Test Home app ](https://github.com/Volneirj/project_iv_ci/issues/28)
+[User Story 30 - Manual Tests Issuing and Returning Books ](https://github.com/Volneirj/project_iv_ci/issues/30)
+[User Story 31 - Manual testing URL Issues APP ](https://github.com/Volneirj/project_iv_ci/issues/31)
+[User Story 34 - Manual Testing URL Users APP ](https://github.com/Volneirj/project_iv_ci/issues/34)
