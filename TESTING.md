@@ -103,6 +103,7 @@ A comprehensive manual testing process was conducted to address areas that autom
 Two issues were identified during testing: one related to time zone handling in the model and another concerning HTML form validation on the sign-up page. The first bug involved a conflict when calculating the return date due to time zone differences, which has been successfully resolved. The second issue, stemming from Crispy Forms, affected form validation. 
 
 The resolution for the time zone bug is detailed in the stories below.
+
 [User Story 36 - Handle Timezone-Related Issues in Book Issuance ](https://github.com/Volneirj/project_iv_ci/issues/32)
 
 Regarding the HTML validation error, I have chosen to leave it as is, since it does not impact the application's functionality and is caused by Crispy Forms. Below, you can see the error encountered during validation testing with the [W3C HTML Validator](https://validator.w3.org/). The second image highlights the specific line where the error occurs, identified through page inspection.
