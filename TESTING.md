@@ -12,8 +12,6 @@
 - [Manual Testing](#manual-testing)
 
 
-
-
 ## Lighthouse Testing
 
 Lighthouse validation was run on all pages (both mobile and desktop) in order to check performance, accessibility, best practices and CEO.

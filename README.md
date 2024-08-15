@@ -55,8 +55,8 @@ This project serves as an educational resource, demonstrating the application of
 - Open Suggestion book page, in case anyone want to suggest new books. 
         <details><summary>Book Suggestion Form</summary><img src="static/media/readme_images/features/suggest-book.jpg"></details>
 
-- Thank you page.
-        <details><summary>Thank you Page</summary><img src="static/media/readme_images/features/suggest-book-thanks.jpg"></details>
+- Thank you submition page.
+        <details><summary>Thank you page</summary><img src="static/media/readme_images/features/suggest-book-thanks.jpg"></details>
 
 - Easy and clean admin interface to see the book suggestions.
         <details><summary>Login</summary><img src="static/media/readme_images/features/suggest-book-adm.jpg"></details>
