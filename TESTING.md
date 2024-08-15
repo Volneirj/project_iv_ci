@@ -13,7 +13,7 @@
 
 ### HTML
 
-All HTML pages were validated using the [W3C HTML Validator](https://validator.w3.org/), and no errors were detected.
+All HTML pages were validated using the [W3C HTML Validator](https://validator.w3.org/), one error as identified on Signup page but will be discussed in the bugs and errors section.
 | Page                                                                                                                                     | Result              |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
 | <details><summary>Home</summary><img src="static/media/readme_images/testing/html-check-home.jpg"></details>                      | <mark>PASS</mark>   |
@@ -22,7 +22,7 @@ All HTML pages were validated using the [W3C HTML Validator](https://validator.w
 | <details><summary>Suggestion form</summary><img src="static/media/readme_images/testing/html-check-books-sugestion-form,jpg"></details>            | <mark>PASS</mark>   |
 | <details><summary>My issued List</summary><img src="static/media/readme_images/testing/html-check-issues-list.jpg"></details>          | <mark>PASS</mark>   |
 | <details><summary>View Suggestions</summary><img src="static/media/readme_images/testing/html-check-view-suggestions"></details>          | <mark>PASS</mark>   |
-| <details><summary>Signup</summary><img src="static/media/readme_images/testing/html-check-signup.jpg"></details>        | <mark>PASS</mark>   |
+| <details><summary>Signup</summary><img src="static/media/readme_images/testing/html-check-signup.jpg"></details>        | <mark>Error</mark>   |
 | <details><summary>Login</summary><img src="static/media/readme_images/testing/html-check-login.jpg"></details>      | <mark>PASS</mark>   |
 | <details><summary>About</summary><img src="static/media/readme_images/testing/html-check-about.jpg"></details>  | <mark>PASS</mark>   |
 | <details><summary>Confirm Book Return</summary><img src="static/media/readme_images/testing/html-check-creturn.jpg"></details>      | <mark>PASS</mark>   |
