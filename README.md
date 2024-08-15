@@ -3,10 +3,24 @@
 
 Welcome to VIL-MASYS, the Virtual Library Management System designed to streamline the management of libraries by providing a robust, user-friendly platform. Whether you are a librarian or a book lover, VIL-MASYS is built to enhance your library experience by bringing all the essential functionalities online.
 
-![Requirements.txt](static/media/readme_images/features/responsive.jpg)
+[Link to VIL-MASYS - Virtual Library Management System](https://librarysystem-4f4e1e02f356.herokuapp.com/)
+![responsive](documentation/readme_images/features/responsive.jpg)
 
-[VIL-MASYS - Virtual Library Management System](https://librarysystem-4f4e1e02f356.herokuapp.com/)
+# Table of Contents
 
+- [Project Overview](#project-overview)
+  - [Purpose](#purpose)
+  - [Existing Features](#existing-features)
+- [Technical Design](#technical-design)
+  - [WireFrames](#wireframes)
+  - [Models Relationships](#models-relationships)
+- [Technologies](#technologies)
+- [Main Used Libraries](#main-used-libraries)
+- [Testing and Fixing Bugs](#testing-and-fixing-bugs)
+- [Deployment](#deployment)
+  - [GitHub Forking](#github-forking)
+  - [Heroku Deployment](#heroku-deployment)
+- [Credits](#credits)
 
 ## Project Overview
 
@@ -19,109 +33,109 @@ This project serves as an educational resource, demonstrating the application of
 #### Navigation bar
 
 - The Navigation bar is customized for the three type of logins: Administrator, Registred user and no registered users.
-        <details><summary>Administrator Navbar</summary><img src="static/media/readme_images/features/menu-adm.jpg"></details>
-        <details><summary>Normal User NavBar</summary><img src="static/media/readme_images/features/menu-normal-user.jpg"></details>
-        <details><summary>Not Logged-in NabBar</summary><img src="static/media/readme_images/features/menu-no-user.jpg"></details>
+        <details><summary>Administrator Navbar</summary><img src="documentation/readme_images/features/menu-adm.jpg"></details>
+        <details><summary>Normal User NavBar</summary><img src="documentation/readme_images/features/menu-normal-user.jpg"></details>
+        <details><summary>Not Logged-in NabBar</summary><img src="documentation/readme_images/features/menu-no-user.jpg"></details>
 
 
 #### Main Page - Top 3 Books
 
 - The "3 Most Issued Books" section enhances user engagement by showcasing popular titles and guiding users toward trending books, while also promoting the circulation of these frequently borrowed items.
-        <details><summary>Top 5 Issued Books</summary><img src="static/media/readme_images/features/top-issued-books.jpg"></details>
+        <details><summary>Top 5 Issued Books</summary><img src="documentation/readme_images/features/top-issued-books.jpg"></details>
 
 #### Main Page - Website Introduction Features
 
 - Why issue with us section brings the benefits of use the booking system in this online plataform. 
 - How to issue a book, shows the new user how simple is to issue a book in our plataform.
 - The button to join the library after the features explained is to encourage the user to join the website.
-        <details><summary>Main Page Features Introduction</summary><img src="static/media/readme_images/features/features.jpg"></details>
+        <details><summary>Main Page Features Introduction</summary><img src="documentation/readme_images/features/features.jpg"></details>
 
 
 #### About Page
 
 - The About page provides an overview of VIL-MASYS, our Virtual Library Management System, highlighting its purpose and key features.
-        <details><summary>About Page</summary><img src="static/media/readme_images/features/about.jpg"></details>
+        <details><summary>About Page</summary><img src="documentation/readme_images/features/about.jpg"></details>
 
 #### Sign up/Login page
 
 - Simple quick signup.
-        <details><summary>Signup</summary><img src="static/media/readme_images/features/signup.jpg"></details>
+        <details><summary>Signup</summary><img src="documentation/readme_images/features/signup.jpg"></details>
 
 - Login Page has a button to signup page in case the person has not user yet.
-        <details><summary>Login</summary><img src="static/media/readme_images/features/login.jpg"></details>
+        <details><summary>Login</summary><img src="documentation/readme_images/features/login.jpg"></details>
 
 #### Book Suggestions Forms
 
 - Open Suggestion book page, in case anyone want to suggest new books. 
-        <details><summary>Book Suggestion Form</summary><img src="static/media/readme_images/features/suggest-book.jpg"></details>
+        <details><summary>Book Suggestion Form</summary><img src="documentation/readme_images/features/suggest-book.jpg"></details>
 
 - Thank you submition page.
-        <details><summary>Thank you page</summary><img src="static/media/readme_images/features/suggest-book-thanks.jpg"></details>
+        <details><summary>Thank you page</summary><img src="documentation/readme_images/features/suggest-book-thanks.jpg"></details>
 
 - Easy and clean admin interface to see the book suggestions.
-        <details><summary>Login</summary><img src="static/media/readme_images/features/suggest-book-adm.jpg"></details>
+        <details><summary>Login</summary><img src="documentation/readme_images/features/suggest-book-adm.jpg"></details>
 
 #### Book Issuance system
 
 - Easy issuance when clicked in a book cover, you will be directed for book details where if logged will show the option to book it other wise will show the login button.
-        <details><summary>Book Detail No user</summary><img src="static/media/readme_images/features/book-detail-nouser.jpg"></details>
-        <details><summary>Book Detail user conected</summary><img src="static/media/readme_images/features/book-detail-user.jpg"></details>
+        <details><summary>Book Detail No user</summary><img src="documentation/readme_images/features/book-detail-nouser.jpg"></details>
+        <details><summary>Book Detail user conected</summary><img src="documentation/readme_images/features/book-detail-user.jpg"></details>
 
 - Confirmation screen showing the details of your issuance.
-        <details><summary>Issuance Details</summary><img src="static/media/readme_images/features/issue-book-screen.jpg"></details>
+        <details><summary>Issuance Details</summary><img src="documentation/readme_images/features/issue-book-screen.jpg"></details>
 
 - You can see your history and return the books on My issued Books Link on Navigation bar.
-        <details><summary>My Issued Books</summary><img src="static/media/readme_images/features/issued-book-history.jpg"></details>
+        <details><summary>My Issued Books</summary><img src="documentation/readme_images/features/issued-book-history.jpg"></details>
 
 - When returned a book as good practice it has a confirmation. 
-        <details><summary>Return Book Confirmation</summary><img src="static/media/readme_images/features/returning-book-confirmation.jpg"></details>
-        <details><summary>Book Return Notification</summary><img src="static/media/readme_images/features/book-return-notify.jpg"></details>    
+        <details><summary>Return Book Confirmation</summary><img src="documentation/readme_images/features/returning-book-confirmation.jpg"></details>
+        <details><summary>Book Return Notification</summary><img src="documentation/readme_images/features/book-return-notify.jpg"></details>    
 
 
 #### Book Collection
 
 - The book collection has a search bar to search a title and shows the book cover and book name to easy visualization.
-        <details><summary>Book Collection</summary><img src="static/media/readme_images/features/bookcolection.jpg"></details>
+        <details><summary>Book Collection</summary><img src="documentation/readme_images/features/bookcolection.jpg"></details>
 
 - When logged in with admin, shows the option on the top to add new books.
-        <details><summary>Admin book collection interface</summary><img src="static/media/readme_images/features/add-book.jpg"></details>
+        <details><summary>Admin book collection interface</summary><img src="documentation/readme_images/features/add-book.jpg"></details>
 
 #### Administrator CRUD Fucntion
 
 - As web administrator is possible to add, update or delete books.
     - Adding a book:
         1. On book Collection page as Administrator will show a button Add book.
-                <details><summary>Add a book</summary><img src="static/media/readme_images/features/add-book.jpg"></details>
+                <details><summary>Add a book</summary><img src="documentation/readme_images/features/add-book.jpg"></details>
         2. The link will bring you to a page where you can fill the form to add a book.
-                <details><summary>Add a book form</summary><img src="static/media/readme_images/features/add-book-2.jpg"></details>
+                <details><summary>Add a book form</summary><img src="documentation/readme_images/features/book-add-2.jpg"></details>
         3.  If not loaded a book cover, it automaticaly will add a placeholder image saying book image not available.
-                <details><summary>Book Image not Available</summary><img src="static/media/readme_images/features/book-image-notavailable.jpg"></details>
+                <details><summary>Book Image not Available</summary><img src="documentation/readme_images/features/book-image-notavailable.jpg"></details>
 - As web administrator when on book details will be visible the buttons to update and delete the book.
-            <details><summary>CRUD options</summary><img src="static/media/readme_images/features/CRUD-edit-delete.jpg"></details>
+            <details><summary>CRUD options</summary><img src="documentation/readme_images/features/CRUD-edit-delete.jpg"></details>
     - Updating a book:
         1. Click on edit book.
         2. Will open the Update book page where you can change all book information.
-                <details><summary>Update Book</summary><img src="static/media/readme_images/features/CRUD-edit.jpg"></details>
+                <details><summary>Update Book</summary><img src="documentation/readme_images/features/CRUD-edit.jpg"></details>
     - Deleting a book:
         1. Click on Delete book.
         2. You Will be directed to a deletion page confirmation.
-                <details><summary>Delete Book</summary><img src="static/media/readme_images/features/CRUD-delete.jpg"></details>
+                <details><summary>Delete Book</summary><img src="documentation/readme_images/features/CRUD-delete.jpg"></details>
 
 #### Footer with social media.   
 
 - Footer has the social media links opening in a new page.
-            <details><summary>Footer</summary><img src="static/media/readme_images/features/footer.jpg"></details>
+            <details><summary>Footer</summary><img src="documentation/readme_images/features/footer.jpg"></details>
 
 #### Extra Functions
 
 - Late fee function, if the book is not returned in 14 days, will have a 1$ for every day delay.
-        <details><summary>Late Fee</summary><img src="static/media/readme_images/features/late-fee.jpg"></details>
+        <details><summary>Late Fee</summary><img src="documentation/readme_images/features/late-fee.jpg"></details>
 - You cannot issue 2 same title at once.
-        <details><summary>Book already issued notification </summary><img src="static/media/readme_images/features/notification-book-already-issued.jpg"></details>
+        <details><summary>Book already issued notification </summary><img src="documentation/readme_images/features/notification-book-already-issued.jpg"></details>
 - You only can issue 3 books at once.
-        <details><summary>Max issue notfication</summary><img src="static/media/readme_images/features/max-issue.jpg"></details>
+        <details><summary>Max issue notfication</summary><img src="documentation/readme_images/features/max-issue.jpg"></details>
 - Book out of stock.
-        <details><summary>Book out of stock notfication</summary><img src="static/media/readme_images/features/out-of-stock.jpg"></details>
+        <details><summary>Book out of stock notfication</summary><img src="documentation/readme_images/features/out-of-stock.jpg"></details>
 
 ## Technical Design
 
@@ -130,11 +144,11 @@ This project serves as an educational resource, demonstrating the application of
 - When the VIL-MASYS project began, I created basic wireframes to outline the initial design and functionality of the application. These wireframes served as a starting point to visualize the core structure and user flow. However, as development progressed, significant changes were made to improve the user experience, functionality, and overall design.
 
 - Initial WireFrame Design:
-        <details><summary>Home</summary><img src="static/media/readme_images/wireframes/home.jpg"></details>
-        <details><summary>Book Info</summary><img src="static/media/readme_images/wireframes/book-info.jpg"></details>
-        <details><summary>Login</summary><img src="static/media/readme_images/wireframes/login.jpg"></details>
-        <details><summary>Issued Book</summary><img src="static/media/readme_images/wireframes/issue-book-page.jpg"></details>
-        <details><summary>About</summary><img src="static/media/readme_images/wireframes/about.jpg"></details>
+        <details><summary>Home</summary><img src="documentation/readme_images/wireframes/home.jpg"></details>
+        <details><summary>Book Info</summary><img src="documentation/readme_images/wireframes/book-info.jpg"></details>
+        <details><summary>Login</summary><img src="documentation/readme_images/wireframes/login.jpg"></details>
+        <details><summary>Issued Book</summary><img src="documentation/readme_images/wireframes/issue-book-page.jpg"></details>
+        <details><summary>About</summary><img src="documentation/readme_images/wireframes/about.jpg"></details>
 
 - Key Changes:
     - Enhanced User Interface: The initial wireframes were simple and lacked the visual appeal needed for a modern web application. As the project evolved, I introduced a more polished and intuitive interface, incorporating feedback and best practices in UI/UX design.
@@ -166,7 +180,7 @@ This project serves as an educational resource, demonstrating the application of
             - This model contains information about the suggested book's title and author, as well as optional fields for the user’s name, email, and reason for suggesting the book.
             - While this model is not directly related to the Book or User models through foreign keys, it plays an important role in allowing users to contribute to the library’s growth.
 
-    <details><summary>Relations</summary><img src="static/media/readme_images/relation.jpg"></details>
+    <details><summary>Relations</summary><img src="documentation/readme_images/relation.jpg"></details>
 
 ## Technologies
 
@@ -243,7 +257,7 @@ This project serves as an educational resource, demonstrating the application of
 ## Testing 
 
 - The page of tests can be found in the link bellow.
-    [Project Test documentation](TESTING.md) 
+        [Project Test documentation](TESTING.md)
 
 ## Deployment
 
@@ -277,7 +291,7 @@ This project serves as an educational resource, demonstrating the application of
     2. Run the command: pip3 freeze >requirements.txt.
     3. Check if the file has been updated like the image bellow.
 
-![Requirements.txt](static/media/readme_images/general_info/requirements.jpg)
+![Requirements.txt](documentation/readme_images/general_info/requirements.jpg)
 
 - **Creating an Application with Heroku**
     - To be able to  deploy and run the application on heroku plataform, is necessary follow a few steps:
@@ -285,36 +299,38 @@ This project serves as an educational resource, demonstrating the application of
     1. Login or create an account on Heroku website.
     2. Click on create a new app.
 
-![New app](static/media/readme_images/general_info/create-new-app.jpg)
+![New app](documentation/readme_images/general_info/create-new-app.jpg)
 
 3. After create the new app, you need to configure the settings.
 4. The first setting which need to be done is add your enviroment info to the plataform so it will be able to access outside sources.
 
-![Settings CREDS](static/media/readme_images/general_info/creds.jpg)
+![Settings CREDS](documentation/readme_images/general_info/creds.jpg)
 
 5. Add the Buildpacks necessary to run the application, in this case python and nodejs in this sequence.
 
-![Buildpacks](static/media/readme_images/general_info/buildpacks.jpg)
+![Buildpacks](documentation/readme_images/general_info/buildpacks.jpg)
 
 6. After done the settings we move to the deploy tab where we will configure the deployment setup.
 7. Connect your Github.
 8. Select your repository on github.
 9. Connect to the repository.
 
-![Github](static/media/readme_images/general_info/github.jpg)
+![Github](documentation/readme_images/general_info/github.jpg)
 
 10. After all setting above been done you can select to deploy automatic or manual.
 
-![Deploy](static/media/readme_images/general_info/deploy.jpg)
+![Deploy](documentation/readme_images/general_info/deploy.jpg)
 
 11. After press to deploy your project if all settings are working you should see it building the application.
 
-![Project being Deployed](static/media/readme_images/general_info/deployed.jpg)
+![Project being Deployed](documentation/readme_images/general_info/deployed.jpg)
 
 12. After all steps of deployment will show a button View, where you can click to open a new tab with the application.
 
-![Deploy done](static/media/readme_images/general_info/done.jpg)
+![Deploy done](documentation/readme_images/general_info/done.jpg)
 
 
 ## Credits
+
+Mentor : Harry Dhillon
 

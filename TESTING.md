@@ -9,6 +9,7 @@
 - [Manual and Automating Testing](#manual-and-automating-testing) 
   - [Automated Testing](#automated-testing)
   - [Manual Testing](#manual-testing)
+- [Bugs and Errors](#issues-and-errors)
 
 ### HTML
 
@@ -91,3 +92,19 @@ A comprehensive manual testing process was conducted to address areas that autom
 [User Story 30 - Manual Tests Issuing and Returning Books ](https://github.com/Volneirj/project_iv_ci/issues/30)
 [User Story 31 - Manual testing URL Issues APP ](https://github.com/Volneirj/project_iv_ci/issues/31)
 [User Story 34 - Manual Testing URL Users APP ](https://github.com/Volneirj/project_iv_ci/issues/34)
+
+### Bugs and Erros.
+
+Two issues were identified during testing: one related to time zone handling in the model and another concerning HTML form validation on the sign-up page. The first bug involved a conflict when calculating the return date due to time zone differences, which has been successfully resolved. The second issue, stemming from Crispy Forms, affected form validation. 
+
+The resolution for the time zone bug is detailed in the stories below.
+[User Story 36 - Handle Timezone-Related Issues in Book Issuance ](https://github.com/Volneirj/project_iv_ci/issues/32)
+
+Regarding the HTML validation error, I have chosen to leave it as is, since it does not impact the application's functionality and is caused by Crispy Forms. Below, you can see the error encountered during validation testing with the [W3C HTML Validator](https://validator.w3.org/). The second image highlights the specific line where the error occurs, identified through page inspection.
+
+
+[screenshot](documentation/readme_images/testing/html-check-signup.jpg)
+
+[screenshot](documentation/readme_images/testing/html-check-signup-error.jpg)
+
+
