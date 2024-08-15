@@ -26,17 +26,16 @@ Welcome to VIL-MASYS, the Virtual Library Management System designed to streamli
 
 ### Purpose:
 
-This project serves as an educational resource, demonstrating the application of Python development skills in building a comprehensive web-based book issuance system. The project showcases how Django can be leveraged to create a scalable and interactive application, with a focus on user experience, data management, and thorough testing.In general this project exemplifies how Python, Django, Bootstrap, and Cloudinary can be combined to build a functional, secure, and visually appealing web application.
+This project serves as an educational resource, demonstrating the application of Python development skills in building a comprehensive web-based book issuance system. The project showcases how Django can be leveraged to create a scalable and interactive application, with a focus on user experience, data management, and thorough testing. In general, this project exemplifies how Python, Django, Bootstrap, and Cloudinary can be combined to build a functional, secure, and visually appealing web application.
 
 ### Existing Features
 
 #### Navigation bar
 
-- The Navigation bar is customized for the three type of logins: Administrator, Registred user and no registered users.
+- The Navigation bar is customized for the three types of logins: Administrator, Registered user, and non-registered users.
         <details><summary>Administrator Navbar</summary><img src="documentation/readme_images/features/menu-adm.jpg"></details>
         <details><summary>Normal User NavBar</summary><img src="documentation/readme_images/features/menu-normal-user.jpg"></details>
-        <details><summary>Not Logged-in NabBar</summary><img src="documentation/readme_images/features/menu-no-user.jpg"></details>
-
+        <details><summary>Not Logged-in NavBar</summary><img src="documentation/readme_images/features/menu-no-user.jpg"></details>
 
 #### Main Page - Top 3 Books
 
@@ -45,11 +44,10 @@ This project serves as an educational resource, demonstrating the application of
 
 #### Main Page - Website Introduction Features
 
-- Why issue with us section brings the benefits of use the booking system in this online plataform. 
-- How to issue a book, shows the new user how simple is to issue a book in our plataform.
-- The button to join the library after the features explained is to encourage the user to join the website.
+- The "Why issue with us" section highlights the benefits of using the booking system on this online platform. 
+- The "How to issue a book" section shows new users how simple it is to issue a book on our platform.
+- The button to join the library, shown after the features are explained, encourages users to join the website.
         <details><summary>Main Page Features Introduction</summary><img src="documentation/readme_images/features/features.jpg"></details>
-
 
 #### About Page
 
@@ -58,84 +56,83 @@ This project serves as an educational resource, demonstrating the application of
 
 #### Sign up/Login page
 
-- Simple quick signup.
+- Simple, quick signup.
         <details><summary>Signup</summary><img src="documentation/readme_images/features/signup.jpg"></details>
 
-- Login Page has a button to signup page in case the person has not user yet.
+- The Login Page has a button to the signup page in case the person is not yet a user.
         <details><summary>Login</summary><img src="documentation/readme_images/features/login.jpg"></details>
 
 #### Book Suggestions Forms
 
-- Open Suggestion book page, in case anyone want to suggest new books. 
+- Open the Suggestion book page in case anyone wants to suggest new books. 
         <details><summary>Book Suggestion Form</summary><img src="documentation/readme_images/features/suggest-book.jpg"></details>
 
-- Thank you submition page.
+- Thank you submission page.
         <details><summary>Thank you page</summary><img src="documentation/readme_images/features/suggest-book-thanks.jpg"></details>
 
-- Easy and clean admin interface to see the book suggestions.
-        <details><summary>Login</summary><img src="documentation/readme_images/features/suggest-book-adm.jpg"></details>
+- Easy and clean admin interface to view the book suggestions.
+        <details><summary>Admin Interface</summary><img src="documentation/readme_images/features/suggest-book-adm.jpg"></details>
 
-#### Book Issuance system
+#### Book Issuance System
 
-- Easy issuance when clicked in a book cover, you will be directed for book details where if logged will show the option to book it other wise will show the login button.
-        <details><summary>Book Detail No user</summary><img src="documentation/readme_images/features/book-detail-nouser.jpg"></details>
-        <details><summary>Book Detail user conected</summary><img src="documentation/readme_images/features/book-detail-user.jpg"></details>
+- Easy issuance when you click on a book cover, you will be directed to book details where, if logged in, it will show the option to book it; otherwise, it will show the login button.
+        <details><summary>Book Detail No User</summary><img src="documentation/readme_images/features/book-detail-nouser.jpg"></details>
+        <details><summary>Book Detail User Connected</summary><img src="documentation/readme_images/features/book-detail-user.jpg"></details>
 
 - Confirmation screen showing the details of your issuance.
         <details><summary>Issuance Details</summary><img src="documentation/readme_images/features/issue-book-screen.jpg"></details>
 
-- You can see your history and return the books on My issued Books Link on Navigation bar.
+- You can see your history and return the books on the My Issued Books Link on the Navigation bar.
         <details><summary>My Issued Books</summary><img src="documentation/readme_images/features/issued-book-history.jpg"></details>
 
-- When returned a book as good practice it has a confirmation. 
+- When returning a book, as a good practice, it has a confirmation.
         <details><summary>Return Book Confirmation</summary><img src="documentation/readme_images/features/returning-book-confirmation.jpg"></details>
-        <details><summary>Book Return Notification</summary><img src="documentation/readme_images/features/book-return-notify.jpg"></details>    
-
+        <details><summary>Book Return Notification</summary><img src="documentation/readme_images/features/book-return-notify.jpg"></details>
 
 #### Book Collection
 
-- The book collection has a search bar to search a title and shows the book cover and book name to easy visualization.
+- The book collection has a search bar to search a title and shows the book cover and book name for easy visualization.
         <details><summary>Book Collection</summary><img src="documentation/readme_images/features/bookcolection.jpg"></details>
 
-- When logged in with admin, shows the option on the top to add new books.
-        <details><summary>Admin book collection interface</summary><img src="documentation/readme_images/features/add-book.jpg"></details>
+- When logged in as an admin, it shows the option at the top to add new books.
+        <details><summary>Admin Book Collection Interface</summary><img src="documentation/readme_images/features/add-book.jpg"></details>
 
-#### Administrator CRUD Fucntion
+#### Administrator CRUD Function
 
-- As web administrator is possible to add, update or delete books.
+- As a web administrator, it is possible to add, update, or delete books.
     - Adding a book:
-        1. On book Collection page as Administrator will show a button Add book.
+        1. On the Book Collection page as an Administrator, a button labeled "Add book" will be shown.
                 <details><summary>Add a book</summary><img src="documentation/readme_images/features/add-book.jpg"></details>
-        2. The link will bring you to a page where you can fill the form to add a book.
+        2. The link will bring you to a page where you can fill out the form to add a book.
                 <details><summary>Add a book form</summary><img src="documentation/readme_images/features/book-add-2.jpg"></details>
-        3.  If not loaded a book cover, it automaticaly will add a placeholder image saying book image not available.
+        3. If a book cover is not loaded, it will automatically add a placeholder image saying "Book image not available."
                 <details><summary>Book Image not Available</summary><img src="documentation/readme_images/features/book-image-notavailable.jpg"></details>
-- As web administrator when on book details will be visible the buttons to update and delete the book.
-            <details><summary>CRUD options</summary><img src="documentation/readme_images/features/CRUD-edit-delete.jpg"></details>
+- As a web administrator, when on book details, the buttons to update and delete the book will be visible.
+            <details><summary>CRUD Options</summary><img src="documentation/readme_images/features/CRUD-edit-delete.jpg"></details>
     - Updating a book:
-        1. Click on edit book.
-        2. Will open the Update book page where you can change all book information.
+        1. Click on "Edit book."
+        2. The "Update Book" page will open where you can change all book information.
                 <details><summary>Update Book</summary><img src="documentation/readme_images/features/CRUD-edit.jpg"></details>
     - Deleting a book:
-        1. Click on Delete book.
-        2. You Will be directed to a deletion page confirmation.
+        1. Click on "Delete book."
+        2. You will be directed to a deletion page for confirmation.
                 <details><summary>Delete Book</summary><img src="documentation/readme_images/features/CRUD-delete.jpg"></details>
 
-#### Footer with social media.   
+#### Footer with Social Media Links  
 
-- Footer has the social media links opening in a new page.
+- The footer has social media links that open in a new page.
             <details><summary>Footer</summary><img src="documentation/readme_images/features/footer.jpg"></details>
 
 #### Extra Functions
 
-- Late fee function, if the book is not returned in 14 days, will have a 1$ for every day delay.
+- Late fee function: If the book is not returned in 14 days, a $1 fee will be applied for each day of delay.
         <details><summary>Late Fee</summary><img src="documentation/readme_images/features/late-fee.jpg"></details>
-- You cannot issue 2 same title at once.
-        <details><summary>Book already issued notification </summary><img src="documentation/readme_images/features/notification-book-already-issued.jpg"></details>
-- You only can issue 3 books at once.
-        <details><summary>Max issue notfication</summary><img src="documentation/readme_images/features/max-issue.jpg"></details>
+- You cannot issue two copies of the same title at once.
+        <details><summary>Book Already Issued Notification</summary><img src="documentation/readme_images/features/notification-book-already-issued.jpg"></details>
+- You can only issue 3 books at once.
+        <details><summary>Max Issue Notification</summary><img src="documentation/readme_images/features/max-issue.jpg"></details>
 - Book out of stock.
-        <details><summary>Book out of stock notfication</summary><img src="documentation/readme_images/features/out-of-stock.jpg"></details>
+        <details><summary>Book Out of Stock Notification</summary><img src="documentation/readme_images/features/out-of-stock.jpg"></details>
 
 ## Technical Design
 
@@ -153,7 +150,7 @@ This project serves as an educational resource, demonstrating the application of
 - Key Changes:
     - Enhanced User Interface: The initial wireframes were simple and lacked the visual appeal needed for a modern web application. As the project evolved, I introduced a more polished and intuitive interface, incorporating feedback and best practices in UI/UX design.
 
-    - Expanded Features: Originally, the wireframes focused on basic functionalities. During development, new features were added, such as personalized book recommendations, late fee, notifications and advanced search capabilities, which were not part of the initial plan.
+    - Expanded Features: Originally, the wireframes focused on basic functionalities. During development, new features were added, such as personalized book recommendations, late fees, notifications, and advanced search capabilities, which were not part of the initial plan.
 
     - Improved Navigation and Layout: The initial wireframes had a straightforward but somewhat limited navigation structure. I restructured the layout to provide a more seamless and logical flow, making it easier for users to navigate between different sections of the application.
 
@@ -207,7 +204,6 @@ This project serves as an educational resource, demonstrating the application of
 ### User Authentication:
 - **Django's Authentication System:** For handling user registration, login, and permissions.
 
-
 ### Testing:
 - **Django Test Framework:** For unit and integration testing of models, views, and forms.
 - **Unittest:** Python's standard library for writing and running tests.
@@ -228,14 +224,14 @@ This project serves as an educational resource, demonstrating the application of
 ## Main used Libraries
 
 - **Django:** The main web framework used to build your application.
-- **Django Rest Framework (DRF)**: for building APIs.
+- **Django Rest Framework (DRF):** for building APIs.
 - **Bootstrap:** For frontend styling and responsive design.
 - **Pillow:** For image handling in Django.
 - **Cloudinary:** For storing and serving media files (images) in the cloud.
-- **Unittest:** For writing and running tests in  Django application.
+- **Unittest:** For writing and running tests in Django application.
 - **Django Messages Framework:** For displaying flash messages to users.
 - **Django Paginator:** For handling pagination in your views.
-- **PostgreSQL:** As the database backend..
+- **PostgreSQL:** As the database backend.
 - **Django Crispy Forms:** To make Django forms more elegant and manageable.
 - **Gunicorn:** As a Python WSGI HTTP Server for serving your application.
 - **Whitenoise:** For serving static files in production.
@@ -245,18 +241,17 @@ This project serves as an educational resource, demonstrating the application of
 
 ### Debugging 
 
-  - For debugging the python code has been used `print` together with debugging tools and the console logs to help identify bugs, loops, and condition interactions.. 
+  - For debugging the python code, `print` statements were used together with debugging tools and console logs to help identify bugs, loops, and condition interactions. 
 
   **Debugging Tools**
 
-   - [CI Python Linter - Code institute](https://pep8ci.herokuapp.com/)  
+   - [CI Python Linter - Code Institute](https://pep8ci.herokuapp.com/)  
    - [OpenAI Chat](https://chat.openai.com/)
    - [Perplexity AI](https://www.perplexity.ai/) 
 
-
 ## Testing 
 
-- The page of tests can be found in the link bellow.
+- The page of tests can be found at the link below:
         [Project Test documentation](TESTING.md)
 
 ## Deployment
@@ -271,66 +266,66 @@ This project serves as an educational resource, demonstrating the application of
   3. Your repository has now been 'Forked' and you have a copy to work on
 
 - **Cloning the GitHub Repository**
-  - Cloning your repository will allow you to download a local version of the repository to be worked on. Cloning can also be a great way to backup your work.
+  - Cloning your repository will allow you to download a local version of the repository to work on. Cloning can also be a great way to backup your work.
 
   1. Find the relevant GitHub repository
   2. Press the arrow on the Code button
   3. Copy the link that is shown in the drop-down
   4. Open the terminal 
-  5. Move to the folder you want clone it
-  6. In the terminal type 'git clone' & then paste the link you copied in GitHub
+  5. Move to the folder where you want to clone it
+  6. In the terminal type `git clone` and then paste the link you copied in GitHub
   7. Press enter and your local clone will be created.
+
 - Live link: [GitHub Link](https://github.com/Volneirj/project_iv_ci)
 
 ### Heroku Deployment
 
 - **Creating Requirements.txt**
-    - To heroku be able to install the required dependencies is necessary to create the file where will be listed what is needed to run the project.
+    - For Heroku to be able to install the required dependencies, it is necessary to create a file where the needed dependencies are listed.
 
-    1. Create a file requirements.txt.
-    2. Run the command: pip3 freeze >requirements.txt.
-    3. Check if the file has been updated like the image bellow.
+    1. Create a file named `requirements.txt`.
+    2. Run the command: `pip3 freeze >requirements.txt`.
+    3. Check if the file has been updated, as shown in the image below.
 
 ![Requirements.txt](documentation/readme_images/general_info/requirements.jpg)
 
 - **Creating an Application with Heroku**
-    - To be able to  deploy and run the application on heroku plataform, is necessary follow a few steps:
+    - To deploy and run the application on the Heroku platform, it is necessary to follow a few steps:
 
-    1. Login or create an account on Heroku website.
-    2. Click on create a new app.
+    1. Login or create an account on the Heroku website.
+    2. Click on "Create a new app."
 
 ![New app](documentation/readme_images/general_info/create-new-app.jpg)
 
-3. After create the new app, you need to configure the settings.
-4. The first setting which need to be done is add your enviroment info to the plataform so it will be able to access outside sources.
+3. After creating the new app, you need to configure the settings.
+4. The first setting that needs to be done is to add your environment info to the platform so it will be able to access outside sources.
 
 ![Settings CREDS](documentation/readme_images/general_info/creds.jpg)
 
-5. Add the Buildpacks necessary to run the application, in this case python and nodejs in this sequence.
+5. Add the Buildpacks necessary to run the application, in this case, Python and Node.js in this sequence.
 
 ![Buildpacks](documentation/readme_images/general_info/buildpacks.jpg)
 
-6. After done the settings we move to the deploy tab where we will configure the deployment setup.
-7. Connect your Github.
-8. Select your repository on github.
+6. After completing the settings, move to the deploy tab where you will configure the deployment setup.
+7. Connect your GitHub.
+8. Select your repository on GitHub.
 9. Connect to the repository.
 
 ![Github](documentation/readme_images/general_info/github.jpg)
 
-10. After all setting above been done you can select to deploy automatic or manual.
+10. After all the settings above have been done, you can select to deploy automatically or manually.
 
 ![Deploy](documentation/readme_images/general_info/deploy.jpg)
 
-11. After press to deploy your project if all settings are working you should see it building the application.
+11. After pressing deploy, if all settings are correct, you should see it building the application.
 
 ![Project being Deployed](documentation/readme_images/general_info/deployed.jpg)
 
-12. After all steps of deployment will show a button View, where you can click to open a new tab with the application.
+12. After all steps of deployment, a button labeled "View" will be shown, where you can click to open a new tab with the application.
 
 ![Deploy done](documentation/readme_images/general_info/done.jpg)
 
 
 ## Credits
 
-Mentor : Harry Dhillon
-
+Mentor: Harry Dhillon

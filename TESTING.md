@@ -6,35 +6,36 @@
   - [Python](#python)
 - [Responsiveness and Device Testing](#responsiveness-and-device-testing)
 - [Browser Testing](#browser-testing)
-- [Manual and Automating Testing](#manual-and-automating-testing) 
+- [Manual and Automated Testing](#manual-and-automated-testing) 
   - [Automated Testing](#automated-testing)
   - [Manual Testing](#manual-testing)
-- [Bugs and Errors](#issues-and-errors)
+- [Bugs and Errors](#bugs-and-errors)
 
 ### HTML
 
-All HTML pages were validated using the [W3C HTML Validator](https://validator.w3.org/), one error as identified on Signup page but will be discussed in the bugs and errors section.
-| Page                                                                                                                                     | Result              |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
-| <details><summary>Home</summary><img src="static/media/readme_images/testing/html-check-home.jpg"></details>                      | <mark>PASS</mark>   |
-| <details><summary>Book Collection</summary><img src="static/media/readme_images/testing/html-check-books.jpg"></details>                | <mark>PASS</mark>   |
-| <details><summary>Book Detail</summary><img src="static/media/readme_images/testing/html-check-books-detail.jpg"></details>      | <mark>PASS</mark>   |
-| <details><summary>Suggestion form</summary><img src="static/media/readme_images/testing/html-check-books-sugestion-form,jpg"></details>            | <mark>PASS</mark>   |
-| <details><summary>My issued List</summary><img src="static/media/readme_images/testing/html-check-issues-list.jpg"></details>          | <mark>PASS</mark>   |
-| <details><summary>View Suggestions</summary><img src="static/media/readme_images/testing/html-check-view-suggestions"></details>          | <mark>PASS</mark>   |
-| <details><summary>Signup</summary><img src="static/media/readme_images/testing/html-check-signup.jpg"></details>        | <mark>Error</mark>   |
-| <details><summary>Login</summary><img src="static/media/readme_images/testing/html-check-login.jpg"></details>      | <mark>PASS</mark>   |
-| <details><summary>About</summary><img src="static/media/readme_images/testing/html-check-about.jpg"></details>  | <mark>PASS</mark>   |
-| <details><summary>Confirm Book Return</summary><img src="static/media/readme_images/testing/html-check-creturn.jpg"></details>      | <mark>PASS</mark>   |
+All HTML pages were validated using the [W3C HTML Validator](https://validator.w3.org/). One error was identified on the Signup page, which will be discussed in the bugs and errors section.
+| Page                                                                                                               | Result            |
+| ------------------------------------------------------------------------------------------------------------------ | ----------------- |
+| <details><summary>Home</summary><img src="documentation/readme_images/testing/html-check-home.jpg"></details>        | <mark>PASS</mark> |
+| <details><summary>Book Collection</summary><img src="documentation/readme_images/testing/html-check-books.jpg"></details> | <mark>PASS</mark> |
+| <details><summary>Book Detail</summary><img src="documentation/readme_images/testing/html-check-books-detail.jpg"></details> | <mark>PASS</mark> |
+| <details><summary>Suggestion Form</summary><img src="documentation/readme_images/testing/html-check-books-suggestion-form.jpg"></details> | <mark>PASS</mark> |
+| <details><summary>My Issued List</summary><img src="documentation/readme_images/testing/html-check-issues-list.jpg"></details> | <mark>PASS</mark> |
+| <details><summary>View Suggestions</summary><img src="documentation/readme_images/testing/html-check-view-suggestions.jpg"></details> | <mark>PASS</mark> |
+| <details><summary>Signup</summary><img src="documentation/readme_images/testing/html-check-signup.jpg"></details>    | <mark>Error</mark> |
+| <details><summary>Login</summary><img src="documentation/readme_images/testing/html-check-login.jpg"></details>      | <mark>PASS</mark> |
+| <details><summary>About</summary><img src="documentation/readme_images/testing/html-check-about.jpg"></details>      | <mark>PASS</mark> |
+| <details><summary>Confirm Book Return</summary><img src="documentation/readme_images/testing/html-check-creturn-book.jpg"></details> | <mark>PASS</mark> |
 
 ### CSS
 
-- Using the [Markup Validation Service](https://validator.w3.org), through the direct input option the CSS code has been checked looking for errors.
+- Using the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/), the CSS code was checked for errors using the direct input option.
 
-![screenshot](static/media/readme_images/testing/css-validation.jpg)  
+![screenshot](documentation/readme_images/testing/css-validation.jpg)  
 
 ### Python
-- Using the [CI Python Linter - Code institute](https://pep8ci.herokuapp.com/) inspect and validate the python code. All .py files have been checked and most issues found were missing or extra white lines and long lines. All Issues have been fixed.
+
+- Using the [CI Python Linter - Code Institute](https://pep8ci.herokuapp.com/), the Python code was inspected and validated. All `.py` files were checked, and most issues found were related to missing or extra blank lines and long lines. All issues were fixed.
 
 ## Responsiveness and Device Testing
 
@@ -44,12 +45,11 @@ Throughout the development process, the website was rigorously tested across a r
 
 The website was tested across Google Chrome, Safari, and Microsoft Edge, and no issues were found.
 
-## Manual and Automating Testing
+## Manual and Automated Testing
 
 To ensure thorough testing, organization, and control throughout the development process, all testing activities were meticulously aligned with the requirements and acceptance criteria outlined in the epic and related user stories. This structured approach allowed us to systematically cover every aspect of the application, ensuring comprehensive test coverage and alignment with project goals.
 
 [Epic - Comprehensive Testing for Library Management System](https://github.com/Volneirj/project_iv_ci/issues/36)
-
 
 ### Automated Testing
 
@@ -63,9 +63,9 @@ To run the tests, I executed the following command in the terminal:
 
 Total Count of Automated Tests: 41
 
-![screenshot](static/media/readme_images/testing//screen-terminal.jpg)  
+![screenshot](documentation/readme_images/testing/screen-terminal.jpg)  
 
-To create the coverage report, I run the following commands:
+To create the coverage report, I ran the following commands:
 
 `coverage run --source=name-of-app manage.py test`
 
@@ -73,44 +73,40 @@ To create the coverage report, I run the following commands:
 
 Below are the reports on automated tests.
 
-| App                                   | Screenshot                                   | 
-| ------------------------------------- | -------------------------------------------- | 
-| Home  | ![screenshot](static/media/readme_images/testing//report-home.jpg)   |
-| Books  | ![screenshot](static/media/readme_images/testing//report-books.jpg)   |
-| Issues  | ![screenshot](static/media/readme_images/testing//report-issues.jpg)   |
-| Users  | ![screenshot](static/media/readme_images/testing//report-users.jpg)   |
-| About  | ![screenshot](static/media/readme_images/testing//report-about.jpg)   |
-
+| App    | Screenshot                                                                 | 
+| ------ | -------------------------------------------------------------------------- | 
+| Home   | ![screenshot](documentation/readme_images/testing/report-home.jpg)           |
+| Books  | ![screenshot](documentation/readme_images/testing/report-books.jpg)          |
+| Issues | ![screenshot](documentation/readme_images/testing/report-issues.jpg)         |
+| Users  | ![screenshot](documentation/readme_images/testing/report-users.jpg)          |
+| About  | ![screenshot](documentation/readme_images/testing/report-about.jpg)          |
 
 ### Manual Testing
 
 A comprehensive manual testing process was conducted to address areas that automated tests could not cover. Every test has been documented in the user stories below, where they are meticulously organized by application and test type to ensure complete coverage and clarity.
 
-[User Story 23 - Tests About Page ](https://github.com/Volneirj/project_iv_ci/issues/23)
+[User Story 23 - Tests About Page](https://github.com/Volneirj/project_iv_ci/issues/23)
 
-[User Story 27 - Comprehensive Manual Testing of Book Management Features ](https://github.com/Volneirj/project_iv_ci/issues/27)
+[User Story 27 - Comprehensive Manual Testing of Book Management Features](https://github.com/Volneirj/project_iv_ci/issues/27)
 
-[User Story 28 - Test Home app ](https://github.com/Volneirj/project_iv_ci/issues/28)
+[User Story 28 - Test Home App](https://github.com/Volneirj/project_iv_ci/issues/28)
 
-[User Story 30 - Manual Tests Issuing and Returning Books ](https://github.com/Volneirj/project_iv_ci/issues/30)
+[User Story 30 - Manual Tests Issuing and Returning Books](https://github.com/Volneirj/project_iv_ci/issues/30)
 
-[User Story 31 - Manual testing URL Issues APP ](https://github.com/Volneirj/project_iv_ci/issues/31)
+[User Story 31 - Manual Testing URL Issues App](https://github.com/Volneirj/project_iv_ci/issues/31)
 
-[User Story 34 - Manual Testing URL Users APP ](https://github.com/Volneirj/project_iv_ci/issues/34)
+[User Story 34 - Manual Testing URL Users App](https://github.com/Volneirj/project_iv_ci/issues/34)
 
-### Bugs and Erros.
+### Bugs and Errors
 
 Two issues were identified during testing: one related to time zone handling in the model and another concerning HTML form validation on the sign-up page. The first bug involved a conflict when calculating the return date due to time zone differences, which has been successfully resolved. The second issue, stemming from Crispy Forms, affected form validation. 
 
 The resolution for the time zone bug is detailed in the stories below.
 
-[User Story 36 - Handle Timezone-Related Issues in Book Issuance ](https://github.com/Volneirj/project_iv_ci/issues/32)
+[User Story 36 - Handle Timezone-Related Issues in Book Issuance](https://github.com/Volneirj/project_iv_ci/issues/32)
 
-Regarding the HTML validation error, I have chosen to leave it as is, since it does not impact the application's functionality and is caused by Crispy Forms. Below, you can see the error encountered during validation testing with the [W3C HTML Validator](https://validator.w3.org/). The second image highlights the specific line where the error occurs, identified through page inspection.
+Regarding the HTML validation error, I have chosen to leave it as is since it does not impact the application's functionality and is caused by Crispy Forms. Below, you can see the error encountered during validation testing with the [W3C HTML Validator](https://validator.w3.org/). The second image highlights the specific line where the error occurs, identified through page inspection.
 
+![HTML check signup](documentation/readme_images/testing/html-check-signup.jpg)
 
-![Html check sighup](documentation/readme_images/testing/html-check-signup.jpg)
-
-![Signup error location html file](documentation/readme_images/testing/html-check-signup-error.jpg)
-
-
+![Signup error location HTML file](documentation/readme_images/testing/html-check-signup-error.jpg)
