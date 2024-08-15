@@ -87,10 +87,15 @@ Below are the reports on automated tests.
 A comprehensive manual testing process was conducted to address areas that automated tests could not cover. Every test has been documented in the user stories below, where they are meticulously organized by application and test type to ensure complete coverage and clarity.
 
 [User Story 23 - Tests About Page ](https://github.com/Volneirj/project_iv_ci/issues/23)
+
 [User Story 27 - Comprehensive Manual Testing of Book Management Features ](https://github.com/Volneirj/project_iv_ci/issues/27)
+
 [User Story 28 - Test Home app ](https://github.com/Volneirj/project_iv_ci/issues/28)
+
 [User Story 30 - Manual Tests Issuing and Returning Books ](https://github.com/Volneirj/project_iv_ci/issues/30)
+
 [User Story 31 - Manual testing URL Issues APP ](https://github.com/Volneirj/project_iv_ci/issues/31)
+
 [User Story 34 - Manual Testing URL Users APP ](https://github.com/Volneirj/project_iv_ci/issues/34)
 
 ### Bugs and Erros.
@@ -103,8 +108,8 @@ The resolution for the time zone bug is detailed in the stories below.
 Regarding the HTML validation error, I have chosen to leave it as is, since it does not impact the application's functionality and is caused by Crispy Forms. Below, you can see the error encountered during validation testing with the [W3C HTML Validator](https://validator.w3.org/). The second image highlights the specific line where the error occurs, identified through page inspection.
 
 
-[screenshot](documentation/readme_images/testing/html-check-signup.jpg)
+![Html check sighup](documentation/readme_images/testing/html-check-signup.jpg)
 
-[screenshot](documentation/readme_images/testing/html-check-signup-error.jpg)
+![Signup error location html file](documentation/readme_images/testing/html-check-signup-error.jpg)
 
 
