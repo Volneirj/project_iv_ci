@@ -123,6 +123,16 @@ This project serves as an educational resource, demonstrating the application of
 - The footer has social media links that open in a new page.
             <details><summary>Footer</summary><img src="documentation/readme_images/features/footer.jpg"></details>
 
+#### Error Pages.
+
+- Page not found 404.
+        <details><summary>404 page</summary><img src="documentation/readme_images/features/404.jpg"></details>
+
+- Internal Server Error 500 .
+        <details><summary>500 page</summary><img src="documentation/readme_images/features/500.jpg"></details>        
+
+
+
 #### Extra Functions
 
 - Late fee function: If the book is not returned in 14 days, a $1 fee will be applied for each day of delay.
@@ -334,4 +344,4 @@ This project serves as an educational resource, demonstrating the application of
 
 **Book Covers:** Created Using [Canva](https://www.canva.com/)
 
-**Book/Title Descriptions:** [ChatGPT](https://chatgpt.com/)
+**Book/Title Descriptions:** Generated with [ChatGPT](https://chatgpt.com/)
