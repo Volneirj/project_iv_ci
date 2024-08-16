@@ -52,6 +52,9 @@ def issue_book(request, book_id):
 
     # Handle the book issuance process
     if request.method == 'POST':
+        if 'cancel' in request.POST:
+            messages.info(request, "Book issue cancelled.")
+            return redirect('book_detail', book_id=book_id)
         form = IssueBookForm(request.POST)
         if form.is_valid():
             due_date = form.cleaned_data['due_date']
@@ -64,8 +67,10 @@ def issue_book(request, book_id):
             book.available_copies -= 1
             book.issued_times += 1
             book.save()
+            messages.info(request,
+                          f'{issued_book.book} issued successfully!')
             return redirect('book_detail', book_id=book_id)
-        messages.success(request, "Book issued successfully!")
+
     else:
         form = IssueBookForm(initial={'book_id': book_id})
 

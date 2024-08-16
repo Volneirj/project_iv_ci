@@ -3,7 +3,7 @@
 {% block content %}
 <div class="padding-container">
   <div class="signup-container">
-    <h2>Issue a Book</h2>
+    <h2>Click confirm to issue.</h2>
 
     <!-- Issue Book Form -->
     <form method="post">
@@ -12,8 +12,9 @@
       <p class="book-subtitle">{{ book.title }} | {{ book.author }}</p>
       <p>Limit Return Date: {{ due_date }}</p>
       {{ form.due_date.as_hidden }}
-      <div class="btn">
-        <button type="submit">Issue This Book</button>
+      <div>
+        <button type="submit" class="padding-container btn-green">Confirm</button>
+        <button type="submit" name="cancel" class="padding-container btn-danger">Cancel</button>
       </div>
     </form>
   </div>

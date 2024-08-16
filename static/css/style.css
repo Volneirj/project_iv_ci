@@ -234,6 +234,18 @@
     font-weight: bold;
 }
 
+.btn-green {
+    background-color: #0eb11c !important;
+    color: #000000;
+    font-weight: bold;
+}
+
+.btn-red {
+    background-color: #b11e0e !important;
+    color: #000000;
+    font-weight: bold;
+}
+
 /* Sign up container */
 
 /* Centering and styling the signup container */
