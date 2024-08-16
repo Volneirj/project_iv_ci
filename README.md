@@ -333,6 +333,7 @@ This project serves as an educational resource, demonstrating the application of
 
 12. After all steps of deployment, a button labeled "View" will be shown, where you can click to open a new tab with the application.
 
+
 ![Deploy done](documentation/readme_images/general_info/done.jpg)
 
 
