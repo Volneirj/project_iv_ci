@@ -14,7 +14,7 @@ def signup(request):
     authenticated, and logged in, then redirected to the home page.
     """
     if request.user.is_authenticated:
-        # If the user is already logged in, redirect to their profile or home
+        # If the user is already logged in, redirect to homepage
         return redirect('home')
 
     if request.method == 'POST':
