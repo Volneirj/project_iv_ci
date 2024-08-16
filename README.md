@@ -329,9 +329,9 @@ This project serves as an educational resource, demonstrating the application of
 ## Credits
 
 **Mentor:**[Harry Dhillon](https://github.com/Harry-Leepz/)
+
 **Base template:**[I Think Therefore I Blog](https://github.com/Code-Institute-Solutions/blog/)
-**Book Covers:**[Created Using Canva][https://www.canva.com/]
-**Book/Title Descriptions:**[ChatGPT][https://chatgpt.com/]
 
+**Book Covers:**[Created Using Canva](https://www.canva.com/)
 
-
+**Book/Title Descriptions:**[ChatGPT](https://chatgpt.com/)
