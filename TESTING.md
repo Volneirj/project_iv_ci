@@ -16,16 +16,18 @@
 All HTML pages were validated using the [W3C HTML Validator](https://validator.w3.org/). One error was identified on the Signup page, which will be discussed in the bugs and errors section.
 | Page                                                                                                               | Result            |
 | ------------------------------------------------------------------------------------------------------------------ | ----------------- |
-| <details><summary>Home</summary><img src="documentation/readme_images/testing/html-check-home.jpg"></details>        | <mark>PASS</mark> |
-| <details><summary>Book Collection</summary><img src="documentation/readme_images/testing/html-check-books.jpg"></details> | <mark>PASS</mark> |
-| <details><summary>Book Detail</summary><img src="documentation/readme_images/testing/html-check-books-detail.jpg"></details> | <mark>PASS</mark> |
-| <details><summary>Suggestion Form</summary><img src="documentation/readme_images/testing/html-check-books-suggestion-form.jpg"></details> | <mark>PASS</mark> |
-| <details><summary>My Issued List</summary><img src="documentation/readme_images/testing/html-check-issues-list.jpg"></details> | <mark>PASS</mark> |
-| <details><summary>View Suggestions</summary><img src="documentation/readme_images/testing/html-check-view-suggestions.jpg"></details> | <mark>PASS</mark> |
-| <details><summary>Signup</summary><img src="documentation/readme_images/testing/html-check-signup.jpg"></details>    | <mark>Error</mark> |
-| <details><summary>Login</summary><img src="documentation/readme_images/testing/html-check-login.jpg"></details>      | <mark>PASS</mark> |
-| <details><summary>About</summary><img src="documentation/readme_images/testing/html-check-about.jpg"></details>      | <mark>PASS</mark> |
-| <details><summary>Confirm Book Return</summary><img src="documentation/readme_images/testing/html-check-creturn-book.jpg"></details> | <mark>PASS</mark> |
+| <details><summary>Home</summary><img src="documentation/readme_images/testing/html-check-home.jpg"></details>        | PASS |
+| <details><summary>Book Collection</summary><img src="documentation/readme_images/testing/html-check-books.jpg"></details> | PASS|
+| <details><summary>Book Detail</summary><img src="documentation/readme_images/testing/html-check-books-detail.jpg"></details> | PASS |
+| <details><summary>Suggestion Form</summary><img src="documentation/readme_images/testing/html-check-books-suggestion-form.jpg"></details> | PASS |
+| <details><summary>My Issued List</summary><img src="documentation/readme_images/testing/html-check-issues-list.jpg"></details> | PASS |
+| <details><summary>View Suggestions</summary><img src="documentation/readme_images/testing/html-check-view-suggestions.jpg"></details> | PASS |
+| <details><summary>Signup</summary><img src="documentation/readme_images/testing/html-check-signup.jpg"></details>    | ERROR |
+| <details><summary>Login</summary><img src="documentation/readme_images/testing/html-check-login.jpg"></details>      | PASS |
+| <details><summary>About</summary><img src="documentation/readme_images/testing/html-check-about.jpg"></details>      | PASS |
+| <details><summary>Confirm Book Return</summary><img src="documentation/readme_images/testing/html-check-creturn-book.jpg"></details> | PASS |
+
+The HTML is explained at [Bugs and Errors](#bugs-and-errors)
 
 ### CSS
 

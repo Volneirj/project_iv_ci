@@ -328,4 +328,7 @@ This project serves as an educational resource, demonstrating the application of
 
 ## Credits
 
-Mentor: Harry Dhillon
+**Mentor:**[Harry Dhillon](https://github.com/Harry-Leepz/)
+**Base template:**[I Think Therefore I Blog] (https://github.com/Code-Institute-Solutions/blog/)
+
+
