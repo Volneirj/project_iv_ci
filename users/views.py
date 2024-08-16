@@ -13,6 +13,10 @@ def signup(request):
     If the request method is POST and the form is valid, the user is created,
     authenticated, and logged in, then redirected to the home page.
     """
+    if request.user.is_authenticated:
+        # If the user is already logged in, redirect to their profile or home
+        return redirect('home')
+
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():
