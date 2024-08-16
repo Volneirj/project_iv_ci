@@ -142,7 +142,7 @@ This project serves as an educational resource, demonstrating the application of
 - You can only issue 3 books at once.
         <details><summary>Max Issue Notification</summary><img src="documentation/readme_images/features/max-issue.jpg"></details>
 - Book out of stock.
-        <details><summary>Book Out of Stock Notification</summary><img src="documentation/readme_images/features/out-of-stock.jpg"></details>
+        <details><summary>Book Out of Stock Notification</summary><img src="documentation/readme_images/features/out-of-stocks.jpg"></details>
 
 ## Technical Design
 
