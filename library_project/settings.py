@@ -29,7 +29,8 @@ LOGOUT_REDIRECT_URL = '/'
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'SECRET_KEY_S'
+SECRET_KEY = os.getenv('SECRET_KEY_S')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
